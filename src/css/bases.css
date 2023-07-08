@@ -1,0 +1,63 @@
+:root {
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+
+    -moz-tab-size: 2;
+    tab-size: 2;
+
+    text-rendering: optimizeLegibility;
+    
+    --black: #111111;
+    --white: #FFFFFF;
+    --blue: #4F2EE8;
+    --background-light: #F6F6F6;;
+    --background-dark: #202024;
+    --focus-color: #EAC645;
+    --duration: 250ms;
+    --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (min-width: 375px) {
+    .container {
+        max-width: 335px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 704px;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .container {
+        max-width: 1392px;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
