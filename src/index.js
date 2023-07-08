@@ -1,1 +1,1 @@
-// import './js/ назва твого файлу';
+import './js/categories';
