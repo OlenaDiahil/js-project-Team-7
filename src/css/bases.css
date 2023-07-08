@@ -46,6 +46,17 @@
 
     --duration: 250ms;
     --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* // Font weight */
+    --regular: 400;
+    --medium: 500;
+    --bold: 700;
+
+    /* // Breakpoints */
+    --mobile: 375px;
+    --tablet: 768px;
+    --desktop: 1280px;
+    --desktop-wide: 1440px;
 }
 
 .container {
@@ -54,7 +65,7 @@
     margin-right: auto;
 }
 
-@media screen and (min-width: 375px) {
+@media screen and (min-width: var(--mobile)) {
     .container {
         max-width: 335px;
         padding-left: 20px;
@@ -62,7 +73,7 @@
     }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: var(--tablet)) {
     .container {
         max-width: 704px;
         padding-left: 32px;
@@ -70,7 +81,7 @@
     }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: var(--desktop-wide)) {
     .container {
         max-width: 1392px;
         padding-left: 24px;
