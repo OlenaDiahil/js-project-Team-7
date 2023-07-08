@@ -1,0 +1,16 @@
+body {
+    background-color: var(--background-color-main);
+    color: var(--text-color-main);
+  }
+body.dark {
+    --background-color-main: #202024;    
+    --text-color-main: #FFFFFF;
+    --header-background-color: #111111;
+    --header-border-color: #FFFFFF;
+    --header-logo-color: #FFFFFF;
+    --header-icons-color: #FFFFFF;
+    --hover-categories: #EAC645;
+    --button-color-background: #202024;
+    --border-modal: #FFFFFF;
+    --text-modal-cong: rgba(255, 255, 255, 0.50);
+}
