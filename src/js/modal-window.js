@@ -1,21 +1,21 @@
-const bookListItems = document.querySelectorAll('.book-list li');
+const bookItems = document.querySelectorAll('.book-item');
 const modal = document.querySelector('.modal');
+const modalCloseButton = document.querySelector('.modal_close');
 
-// Функція відкриття модалки
-function openModal() {
-  modal.classList.add('open');
-  const closeButton = document.querySelector('.modal__close');
-  closeButton.addEventListener('click', closeModal);
-}
-
-// Функція закриття модалки
-function closeModal() {
-  modal.classList.remove('open');
-  const closeButton = document.querySelector('.modal__close');
-  closeButton.removeEventListener('click', closeModal);
-}
-
-// Додати обробник події на кожний елемент списку книг
-bookListItems.forEach(function (item) {
-  item.addEventListener('click', openModal);
+bookItems.forEach(function (item) {
+  item.addEventListener('click', function () {
+    openModal();
+  });
 });
+
+modalCloseButton.addEventListener('click', function () {
+  closeModal();
+});
+
+function openModal() {
+  modal.classList.remove('hidden');
+}
+
+function closeModal() {
+  modal.classList.add('hidden');
+}
