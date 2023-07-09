@@ -1,5 +1,8 @@
+body.modal-open {
+  overflow: hidden;
+}
 .modal {
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
@@ -9,7 +12,17 @@
   height: 100vh;
   background-color: rgba(17, 17, 17, 0.4);
 }
-
+.modal.open {
+  display: flex;
+}
+ .is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.book-item {
+  cursor: pointer;
+}
 .modal_container {
   overflow-x: auto;
   position: relative;
