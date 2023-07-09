@@ -44,6 +44,13 @@
     text-align: left;
 }
 
+.all-categories-active {
+    font-weight: 600;
+    color: #4F2EE8;
+    text-transform: uppercase;
+    text-align: left;
+}
+
 .category_item:last-child {
     margin-bottom: 0px;
 }

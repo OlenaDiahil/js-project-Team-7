@@ -1,9 +1,11 @@
 import { fetchCategories, fetchCategoryBooks } from "./category-api/category-api";
 
 const categoryListEl = document.querySelector('.categories_list');
+const allCategoriesBtnEl = document.querySelector('.all-categories-active');
 const categoryBooksEl = document.querySelector('.categories-books');
 const categoryNameEl = document.querySelector('.category-name');
 const bookWrapperEL = document.querySelector('.category-books-wrap');
+const bestSellersElmnt = document.querySelector('.home-container');
 
 creatAllCategories();
 
@@ -30,18 +32,30 @@ function renderCategories(category) {
 
 async function clikOnCategory(event) {
 
+    allCategoriesBtnEl.classList.remove('all-categories-active');
+
     const categoryName = event.target.name;
+
+    if (categoryName === 'allcategories') {
+        bestSellersElmnt.classList.remove('visually-hidden');
+        categoryBooksEl.classList.add('visually-hidden');
+        return
+    }
+   
     deleteCategoryBooks();
 
     const response = await fetchCategoryBooks(categoryName).then(data => {
         if (data.list_name === "") {
             return
         }
-        console.log(data);
+        bestSellersElmnt.classList.add('visually-hidden');
+        categoryBooksEl.classList.remove('visually-hidden');
+    
         renderCategoryBooks(data);
         categoryNameEl.textContent = categoryName;
     })
         .catch(error => Notiflix.Notify.failure('Oops! Something went wrong! Try reloading the page!', 1000, selectError()));
+         
 };
   
 function renderCategoryBooks(data) {
