@@ -7,6 +7,12 @@
     border-radius: 20px;
 }
 
+.sidebar {
+    max-width: 336px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .categories {
     max-width: 336px;
     height: 228px;
@@ -56,6 +62,12 @@
 }
 
 @media screen and (min-width: 768px) {
+    .sidebar {
+        max-width: 369px;
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
     .categories {
         max-width: 337px;
         height: 472px;
