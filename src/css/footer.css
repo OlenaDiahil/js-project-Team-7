@@ -1,0 +1,13 @@
+.footer {
+    background-color: var(--header-background-color);
+    padding: 22px;
+    text-align: center;
+}
+
+.footer-text {
+    color: var(--header-logo-color);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: -0.48px;
+}
