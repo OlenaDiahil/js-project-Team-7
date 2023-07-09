@@ -48,6 +48,7 @@ async function clikOnCategory(event) {
         if (data.list_name === "") {
             return
         }
+        console.log(data);
         bestSellersElmnt.classList.add('visually-hidden');
         categoryBooksEl.classList.remove('visually-hidden');
     
@@ -59,8 +60,8 @@ async function clikOnCategory(event) {
 };
   
 function renderCategoryBooks(data) {
-    const markup = data.map(({ book_image, author, title }) => {
-        return `<div class="category-book-wrapper">
+    const markup = data.map(({ _id, book_image, author, title }) => {
+        return `<div id="${_id}" class="category-book-wrapper">
         <img class="category-book-img" src="${book_image}" alt="${title}" />
         <h2 class="category-name-book">${title}</h2>
         <p class="category-name-autor">${author}</p>

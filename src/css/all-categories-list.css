@@ -8,7 +8,9 @@
 }
 
 .sidebar {
-    max-width: 336px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 336px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -63,9 +65,10 @@
 
 @media screen and (min-width: 768px) {
     .sidebar {
-        max-width: 369px;
-        margin-right: 0px;
-        margin-left: 0px;
+        width: 768px;
+        margin-right: 0;
+        margin-left: 0;
+        column-gap: 32px;
     }
 
     .categories {
@@ -90,6 +93,11 @@
 }
 
 @media screen and (min-width: 1440px) {
+    .sidebar {
+        display: inline-flex;
+        width: 380px;
+    }
+
     .categories {
         max-width: 356px;
 
