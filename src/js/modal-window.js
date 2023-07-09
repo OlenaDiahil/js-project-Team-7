@@ -13,9 +13,9 @@ modalCloseButton.addEventListener('click', function () {
 });
 
 function openModal() {
-  modal.classList.remove('hidden');
+  modal.classList.remove('is-hidden');
 }
 
 function closeModal() {
-  modal.classList.add('hidden');
+  modal.classList.add('is-hidden');
 }
