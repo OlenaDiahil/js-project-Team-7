@@ -1,4 +1,4 @@
-const bookItems = document.querySelectorAll('.book-item');
+const bookItems = document.querySelectorAll('.category-book-wrapper');
 const modal = document.querySelector('.modal');
 const modalCloseButton = document.querySelector('.modal_close');
 
