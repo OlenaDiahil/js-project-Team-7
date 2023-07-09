@@ -1,0 +1,73 @@
+body.modal-open {
+  overflow: hidden;
+}
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(17, 17, 17, 0.4);
+}
+.modal.open {
+  display: flex;
+}
+ .is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.book-item {
+  cursor: pointer;
+}
+.modal_container {
+  overflow-x: auto;
+  position: relative;
+  margin: auto;
+  width: 280px;
+  max-height: 100vh;
+  border-radius: 18px;
+  border: 2px solid #111;
+  background: #fff;
+  padding: 40px 24px;
+}
+.book_img {
+  width: 287px;
+  height: 408px;
+  border-radius: 8px;
+}
+.modal_book_img {
+  margin-bottom: 14px;
+}
+.modal_name_book {
+  margin-bottom: 4px;
+}
+.modal_name_author {
+  margin-bottom: 18px;
+}
+.modal_book_about {
+  margin-bottom: 14px;
+}
+.modal_book_marketplaces {
+  margin-bottom: 40px;
+}
+.modal_close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  color: rgb(19, 18, 18);
+  cursor: pointer;
+}
