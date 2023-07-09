@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   const categoryContainer = document.querySelector('#categoryContainer');
 
-  // за даним API отримую доступ до категорій книг
+  // Отримуємо доступ до категорій книг за допомогою API
   fetch('https://books-backend.p.goit.global/books/category-list')
     .then(response => response.json())
     .then(categories => {
@@ -11,9 +11,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const categoryTitleElement = document.createElement('h2');
         categoryTitleElement.textContent = category.list_name;
+        categoryTitleElement.classList.add('category-item');
         categoryElement.appendChild(categoryTitleElement);
 
-        // популярні книги за кожною категорією
+        // Отримуємо популярні книги для кожної категорії
         fetch(`https://books-backend.p.goit.global/books/category?category=${category.list_name}`)
           .then(response => response.json())
           .then(data => {
@@ -24,25 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
               bookListElement.classList.add('book-list');
 
               books.slice(0, 5).forEach(book => {
-                const bookItemElement = document.createElement('li');
-                bookItemElement.classList.add('book-item');
-
-                const bookImageElement = document.createElement('img');
-                bookImageElement.src = book.book_image;
-                bookImageElement.alt = book.title;
-                bookImageElement.classList.add('book-image');
-                bookItemElement.appendChild(bookImageElement);
-
-                const bookTitleElement = document.createElement('h3');
-                bookTitleElement.textContent = book.title;
-                bookTitleElement.classList.add('book-title');
-                bookItemElement.appendChild(bookTitleElement);
-
-                const bookAuthorElement = document.createElement('p');
-                bookAuthorElement.textContent = book.author;
-                bookAuthorElement.classList.add('book-author');
-                bookItemElement.appendChild(bookAuthorElement);
-
+                const bookItemElement = createBookItemElement(book);
                 bookListElement.appendChild(bookItemElement);
               });
 
@@ -55,36 +38,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 categoryElement.appendChild(seeMoreButtonElement);
 
                 seeMoreButtonElement.addEventListener('click', () => {
-                  bookListElement.innerHTML = ''; // чистка списку
+                  const bookListElement = categoryElement.querySelector('.book-list');
 
                   books.slice(5).forEach(book => {
-                    const bookItemElement = document.createElement('li');
-                    bookItemElement.classList.add('book-item');
-
-                    const bookImageElement = document.createElement('img');
-                    bookImageElement.src = book.book_image;
-                    bookImageElement.alt = book.title;
-                    bookImageElement.classList.add('book-image');
-                    bookItemElement.appendChild(bookImageElement);
-
-                    const bookTitleElement = document.createElement('h3');
-                    bookTitleElement.textContent = book.title;
-                    bookTitleElement.classList.add('book-title');
-                    bookItemElement.appendChild(bookTitleElement);
-
-                    const bookAuthorElement = document.createElement('p');
-                    bookAuthorElement.textContent = book.author;
-                    bookAuthorElement.classList.add('book-author');
-                    bookItemElement.appendChild(bookAuthorElement);
-
+                    const bookItemElement = createBookItemElement(book);
                     bookListElement.appendChild(bookItemElement);
                   });
 
-                  if (books.slice(5).length === 0) {
-                    const noMoreBooksElement = document.createElement('p');
-                    noMoreBooksElement.textContent = 'Немає більше книг для цієї категорії';
-                    categoryElement.appendChild(noMoreBooksElement);
-                  }
+                  seeMoreButtonElement.remove(); // Видалити кнопку "See More" після додавання нових книг
                 });
               }
             } else {
@@ -104,3 +65,26 @@ document.addEventListener('DOMContentLoaded', function() {
       console.log('Сталася помилка при отриманні даних з API:', error);
     });
 });
+
+function createBookItemElement(book) {
+  const bookItemElement = document.createElement('li');
+  bookItemElement.classList.add('book-item');
+
+  const bookImageElement = document.createElement('img');
+  bookImageElement.src = book.book_image;
+  bookImageElement.alt = book.title;
+  bookImageElement.classList.add('book-image');
+  bookItemElement.appendChild(bookImageElement);
+
+  const bookTitleElement = document.createElement('h3');
+  bookTitleElement.textContent = book.title;
+  bookTitleElement.classList.add('book-title');
+  bookItemElement.appendChild(bookTitleElement);
+
+  const bookAuthorElement = document.createElement('p');
+  bookAuthorElement.textContent = book.author;
+  bookAuthorElement.classList.add('book-author');
+  bookItemElement.appendChild(bookAuthorElement);
+
+  return bookItemElement;
+}
