@@ -1,0 +1,28 @@
+
+.support-ukraine{
+    margin-left: 24px;
+    margin-top: 40px;
+    display:inline-block;
+}
+
+.shopping__container{
+    display:inline-block;
+    margin-left: 40px;
+}
+.shopping__title{
+    font-family: DM Sans;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 52px;
+    letter-spacing: -0.04em;
+    text-align: left;
+    color: #111111;
+    }
+
+    .shopping__title-span{
+        color: #4F2EE8;
+    }
+
+    .book-card{
+        display: flex;
+    }
