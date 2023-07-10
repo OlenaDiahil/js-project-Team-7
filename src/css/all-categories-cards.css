@@ -60,8 +60,8 @@
 @media screen and (min-width: 768px) {
     .categories-books {
         max-width: 704px;
-        margin-left: 0;
-        margin-right: 0;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .category-name {
