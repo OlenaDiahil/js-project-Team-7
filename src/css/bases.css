@@ -76,17 +76,6 @@ body {
     gap: 86px;
 }
 
-.categories {
-    width: 356px;
-    height: 472px;
-}
-
-.sup-ukr {
-    width: 356px;
-    height: 490px;
-}
-
-
 @media (max-width: 1440px) {
     .container {
         flex-direction: column;
@@ -96,16 +85,6 @@ body {
     .sidebar {
         flex-direction: row;
         gap: 32px;
-    }
-
-    .categories {
-        width: 337px;
-        height: 472px;
-    }
-
-    .sup-ukr {
-        width: 335px;
-        height: 472px;
     }
 }
 
@@ -117,16 +96,6 @@ body {
     .sidebar {
         flex-direction: column;
         gap: 40px;
-    }
-
-    .categories {
-        width: 335px;
-        height: 228px;
-    }
-
-    .sup-ukr {
-        width: 335px;
-        height: 352px;
     }
 }
 
