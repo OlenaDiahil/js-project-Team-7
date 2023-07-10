@@ -1,0 +1,154 @@
+.header-switcher {
+  width: 40px;
+  height: 24px;
+  margin-right: 14px;
+}
+
+@media screen and (min-width: 768px) {
+  .header-switcher {
+    margin-right: 24px;
+  }
+}
+
+.switcher-button {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 24px;
+  margin: 0;
+  vertical-align: top;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: linear-gradient(180deg, #4f2ee8 0%, #dcdcdc 100%);
+}
+
+.switcher-button::after {
+  content: '';
+  background: #ffffff;
+  display: inline-block;
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  transform: translateX(0);
+}
+
+.switcher-button:checked::after {
+  transform: translateX(calc(16px));
+  background-color: #dcdcdc;
+}
+
+.switcher-button:checked {
+  background: linear-gradient(180deg, #4f2ee8 0%, #686868 100%);
+}
+
+.header-overlay {
+  background-color: var(--header-background-color);
+  border: 1.5px solid var(--header-border-color);
+  border-radius: 0px 0px 8px 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+}
+
+.header-logo-link {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+  display: flex;
+  align-items: center;
+
+  color: var(--header-logo-color);
+}
+
+.header-logo {
+  width: 24px;
+  height: 24px;
+
+  margin-right: 8px;
+}
+
+.site-nav {
+  display: flex;
+  gap: 24px;
+}
+
+.site-nav__item {
+  padding: 8px 16px;
+}
+
+.site-nav__item_active {
+  background-color: #eac645;
+  border-radius: 36px;
+  padding: 8px 16px;
+}
+
+.site-nav__link_active {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.28;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+
+  color: #111111;
+}
+
+.site-nav__link {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.28;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+}
+
+.site-nav__logo {
+  width: 20px;
+  height: 20px;
+  fill: #000000;
+
+  margin-left: 4px;
+}
+
+.site-nav__logo_active {
+  width: 20px;
+  height: 20px;
+  fill: #111111;
+
+  margin-left: 4px;
+}
+
+.sign-up-button {
+  display: none;
+}
+
+.sign-up-button_text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: calc(18 / 14);
+  letter-spacing: -0.04em;
+  color: #ffffff;
+}
+
+.burger-menu {
+  width: 28px;
+  height: 28px;
+  background-color: transparent;
+  margin-left: 14px;
+}
