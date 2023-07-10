@@ -9,8 +9,11 @@ body.dark {
     --header-border-color: #FFFFFF;
     --header-logo-color: #FFFFFF;
     --header-icons-color: #FFFFFF;
+    --all-categories-text:rgba(255, 255, 255, 0.60);
+    --scroll-all-categories:rgba(17, 17, 17, 0.60);
     --hover-categories: #EAC645;
     --button-color-background: #202024;
     --border-modal: #FFFFFF;
     --text-modal-cong: rgba(255, 255, 255, 0.50);
+
 }
