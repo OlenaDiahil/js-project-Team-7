@@ -10,3 +10,4 @@ import './js/shopping-list';
 import './js/pagination';
 import './js/footer';
 import './js/refs';
+import './js/scroll-up';
