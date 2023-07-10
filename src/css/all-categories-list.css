@@ -62,8 +62,8 @@
 @media screen and (min-width: 768px) {
     .sidebar {
         width: 704px;
-        margin-right: 0;
-        margin-left: 0;
+        margin-right: auto;
+        margin-left: auto;
         column-gap: 32px;
     }
 
@@ -89,6 +89,10 @@
 @media screen and (min-width: 1440px) {
     .sidebar {
         width: 355px;
+        margin-left: 0;
+        margin-right: 0;
+        row-gap: 86px;
+
     }
 
     .categories {
