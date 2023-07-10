@@ -1,3 +1,5 @@
+                /* Style for switcher */
+
 .header-switcher {
   width: 40px;
   height: 24px;
@@ -7,6 +9,7 @@
 @media screen and (min-width: 768px) {
   .header-switcher {
     margin-right: 24px;
+    margin-left: auto;
   }
 }
 
@@ -48,14 +51,50 @@
   background: linear-gradient(180deg, #4f2ee8 0%, #686868 100%);
 }
 
-.header-overlay {
+                    /* Style for Header */
+
+ .header-overlay {
   background-color: var(--header-background-color);
   border: 1.5px solid var(--header-border-color);
   border-radius: 0px 0px 8px 8px;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
-  height: 64px;
+ /*  height: 64px; */
+ padding-top: 20px;
+ padding-bottom: 20px;
+  }
+
+  @media screen and (min-width:768px) {
+ .header-overlay {
+/*   height: 72px; */
+  /* justify-content: space-between; */
+  padding-top: 14px;
+ padding-bottom: 14px;
+ }
+}
+
+.site-nav  {
+  display: none;
+}
+
+@media screen and (min-width:768px) {
+  .site-nav {
+   display: flex;
+
+  }
+ }
+
+
+
+ @media screen and (min-width:1200px) {
+  .site-nav {
+   margin-right: auto;
+
+  }
+ }
+ .header-logo  {
+  margin-right: 8px;
 }
 
 .header-logo-link {
@@ -66,34 +105,34 @@
   letter-spacing: -0.04em;
   display: flex;
   align-items: center;
-
-  color: var(--header-logo-color);
+  margin-right: 144px;
+  margin-left: 20px;
+   color: var(--header-logo-color);
 }
+@media screen and (min-width:768px) {
+  .header-logo-link {
+    margin-left: 32px;
+    margin-right: 40px;
+      }
+ }
+ @media screen and (min-width: 1440px) { 
+  .header-logo-link { 
+    margin-left: 24px;
+    margin-right: 76px;
+  }}
 
-.header-logo {
-  width: 24px;
-  height: 24px;
 
-  margin-right: 8px;
-}
-
-.site-nav {
-  display: flex;
-  gap: 24px;
-}
-
+ @media screen and (min-width:768px) {
 .site-nav__item {
-  padding: 8px 16px;
-}
+  padding-left: 16px;
 
+}
+ }
+ @media screen and (min-width:768px) {
 .site-nav__item_active {
-  background-color: #eac645;
   border-radius: 36px;
-  padding: 8px 16px;
-}
-
-.site-nav__link_active {
-  font-family: inherit;
+  padding: 8px 16px; 
+   font-family: inherit;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.28;
@@ -101,54 +140,84 @@
   text-transform: uppercase;
   display: flex;
   align-items: center;
+  color: #111;
+}}
 
-  color: #111111;
+@media screen and (min-width:768px) {
+.current {
+  background-color: var(--header-nav-hover);
+}
 }
 
+@media screen and (min-width:768px) {
 .site-nav__link {
   font-family: inherit;
-  font-weight: 700;
+  font-family: DM Sans;
   font-size: 14px;
-  line-height: 1.28;
-  letter-spacing: -0.04em;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: -0.56px;
   text-transform: uppercase;
-  display: flex;
-  align-items: center;
+  color: var(--text-color-main);
 
-  color: #000000;
-}
-
+}}
+@media screen and (min-width:768px) {
 .site-nav__logo {
   width: 20px;
   height: 20px;
-  fill: #000000;
-
+  fill: var(--header-icons-color);
   margin-left: 4px;
-}
-
+  justify-content: center;
+  align-items: center;
+  }}
+@media screen and (min-width:768px) {
 .site-nav__logo_active {
   width: 20px;
   height: 20px;
-  fill: #111111;
-
   margin-left: 4px;
-}
+ 
+  
+}}
 
 .sign-up-button {
   display: none;
 }
-
-.sign-up-button_text {
-  font-weight: 500;
+@media screen and (min-width:768px) {
+.sign-up-button {
+  display: flex;
+  border: none;
+  width: 184px;
+  height: 48px;
+  background-color: #4F2EE8;
+  color: #FFF;
+  font-family: DM Sans;
   font-size: 14px;
-  line-height: calc(18 / 14);
-  letter-spacing: -0.04em;
-  color: #ffffff;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: -0.56px;
+  border-radius: 50px;
+  justify-content: space-between; 
+  align-items: center;
+  padding-left:14px;
+  padding-right:14px;
+  margin-right: 32px;
 }
+}
+
+
 
 .burger-menu {
   width: 28px;
   height: 28px;
   background-color: transparent;
-  margin-left: 14px;
+  border: none;
+  stroke: var(--header-icons-color);
 }
+
+
+@media screen and (min-width:768px) {
+.burger-menu {
+  display: none;
+}}
