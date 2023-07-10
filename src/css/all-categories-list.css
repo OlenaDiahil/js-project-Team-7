@@ -10,19 +10,15 @@
 .sidebar {
     display: flex;
     flex-wrap: wrap;
-    width: 336px;
+    width: 335px;
     margin-right: auto;
     margin-left: auto;
 }
 
 .categories {
-    max-width: 336px;
+    max-width: 335px;
     height: 228px;
     overflow-y: auto;
-
-    margin-top: 40px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .category_item {
@@ -65,7 +61,7 @@
 
 @media screen and (min-width: 768px) {
     .sidebar {
-        width: 768px;
+        width: 704px;
         margin-right: 0;
         margin-left: 0;
         column-gap: 32px;
@@ -75,8 +71,6 @@
         max-width: 337px;
         height: 472px;
 
-        margin-left: 32px;
-        margin-right: 0px;
     }
 
     .category-item-btn {
@@ -94,15 +88,11 @@
 
 @media screen and (min-width: 1440px) {
     .sidebar {
-        display: inline-flex;
-        width: 380px;
+        width: 355px;
     }
 
     .categories {
-        max-width: 356px;
-
-        margin-top: 40px;
-        margin-left: 24px;
+        max-width: 355px;
     }
 
     .category-item-btn:hover,

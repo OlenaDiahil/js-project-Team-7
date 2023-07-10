@@ -1,8 +1,7 @@
 .categories-books {
-    width: 335px;
+    max-width: 335px;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 40px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -60,8 +59,8 @@
 
 @media screen and (min-width: 768px) {
     .categories-books {
-        width: 704px;
-        margin-left: 32px;
+        max-width: 704px;
+        margin-left: 0;
         margin-right: 0;
     }
 
@@ -87,9 +86,7 @@
 
 @media screen and (min-width: 1440px) {
     .categories-books {
-        display: inline-flex;
-        width: 996px;
-        margin-left: 40px;
+        max-width: 996px;
     }
 
     .category-name {
