@@ -7,27 +7,31 @@
   <title>Bookshelf</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css">
   
-  <script type="module" crossorigin src="/js-project-Team-7/assets/modal-window-858bc64f.js"></script>
-  <link rel="stylesheet" href="/js-project-Team-7/assets/modal-window-437631b2.css">
+  <script type="module" crossorigin src="/js-project-Team-7/assets/modal-window-b8f1f9e5.js"></script>
+  <link rel="stylesheet" href="/js-project-Team-7/assets/modal-window-65eda2d6.css">
 </head>
   <body>
     
-    <header class="header">
+    <header class="header container">
   <div class="header-overlay">
-    <a href=".index.html" class="header-logo-link">
-      <!-- <svg class="header-logo">
-        <use href="./img/headerIcons.svg#icon-logo"></use></svg>Bookshelf</a> -->
+    <a href="./index.html" class="header-logo-link">
+      <svg class="header-logo"
+      width="24" height="24">
+        <use href="./assets\img/header/icons.svg#icon-logo"></use>
+      </svg>Bookshelf</a> 
+
     <nav class="navigation">
       <ul class="site-nav">
-        <li class="site-nav__item_active">
+        <li class="site-nav__item_active  current">
           <a href="./index.html" class="site-nav__link_active">Home</a>
         </li>
         <li class="site-nav__item">
           <a href="./shopping-list.html" class="site-nav__link"
             >Shopping list
-            <!-- <svg class="site-nav__logo">
-              <use href="./img/"></use>
-            </svg> -->
+            <svg class="site-nav__logo"
+            width="20" height="20">
+              <use href="./assets\img/header/icons.svg#icon-uil_cart"></use>
+            </svg> 
           </a>
         </li>
       </ul>
@@ -43,16 +47,18 @@
       class="sign-up-button"
       type="button"
       data-modal-open
-      aria-label="sign in"
-    >
-      <span class="sign-up-button_text">Sign up</span>
+      aria-label="sign in">
+      Sing up
       <svg class="sign-up-button_icon" width="20" height="20">
-        <use href="./img/header/icons.svg#arrow-right"></use>
+        <use href="./assets\img/header/icons.svg#arrow-right"></use>
       </svg>
     </button>
+
     <button type="button" class="burger-menu">
-      <svg class="burger-menu__icon">
-        <use href="./img/"></use>
+      <svg class="burger-menu-icon"
+      width="28" 
+      height="28">
+        <use href="./assets\img/header/icons.svg#icon-align-left"></use>
       </svg>
     </button>
   </div>
