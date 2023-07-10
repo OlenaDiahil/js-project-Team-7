@@ -7,7 +7,7 @@
 }
 
 .category-name {
-    color: #111111;
+    color: var(--text-color-main);
     font-family: 'DM Sans', sans-serif;
     font-size: 32px;
     font-style: normal;
@@ -27,7 +27,7 @@
 }
 
 .category-name-book {
-    color: #111;
+    color: var(--text-color-main);
     font-family: 'DM Sans', sans-serif;
     font-size: 16px;
     font-style: normal;
@@ -45,8 +45,12 @@
     row-gap: 40px;
 }
 
+.category-book-wrapper {
+    cursor: pointer;
+}
+
 .category-name-autor {
-    color: #B4AFAF;
+    color: var(--grey-title-color);
     font-family: 'DM Sans', sans-serif;
     font-size: 12px;
     font-style: italic;
@@ -65,7 +69,6 @@
     }
 
     .category-name {
-        color: #111111;
         font-size: 48px;
         line-height: 52px;
         letter-spacing: -1.92px;
@@ -90,7 +93,6 @@
     }
 
     .category-name {
-        color: #111111;
         font-size: 48px;
         line-height: 52px;
         letter-spacing: -1.92px;

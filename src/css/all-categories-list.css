@@ -43,14 +43,14 @@
 .category-item-btn:hover,
 .category-item-btn:focus {
     font-weight: 600;
-    color: #4F2EE8;
+    color: var(--hover-categories);
     text-transform: uppercase;
     text-align: left;
 }
 
 .all-categories-active {
     font-weight: 600;
-    color: #4F2EE8;
+    color: var(--hover-categories);
     text-transform: uppercase;
     text-align: left;
 }
