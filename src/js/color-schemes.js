@@ -1,4 +1,4 @@
-/* const switcherToChangeTheme = document.querySelector('#switcher-button');
+const switcherToChangeTheme = document.querySelector('#switcher-button');
 
 function setDarkTheme() {
   document.body.classList.add('dark');
@@ -21,4 +21,4 @@ switcherToChangeTheme.addEventListener('click', () => {
 if (localStorage.theme === 'dark') {
   document.body.classList.add('dark');
   switcherToChangeTheme.checked = true;
-} */
+}
