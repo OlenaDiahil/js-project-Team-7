@@ -8,12 +8,12 @@
   <title>Bookshelf</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css">
   
-  <script type="module" crossorigin src="/js-project-Team-7/assets/modal-window-9ca3b454.js"></script>
-  <link rel="stylesheet" href="/js-project-Team-7/assets/modal-window-8d24f41f.css">
+  <script type="module" crossorigin src="/js-project-Team-7/assets/scroll-up-8be0c4fd.js"></script>
+  <link rel="stylesheet" href="/js-project-Team-7/assets/scroll-up-8b326067.css">
 </head>
 
 <body>
-  <div class="header">  
+  <div class="header">
     <header class="header container">
   <div class="header-overlay">
     <a href="./index.html" class="header-logo-link">
@@ -91,7 +91,7 @@
     <h2 class="head-title">
         Support Ukraine
         <svg class="icon-ua" width="20" height="32">
-            <use href="../img/support-ukraine/ua-swiper.svg#icon-ua"></use>
+            <use href="../assets/img/support-ukraine/ua-swiper.svg#icon-ua"></use>
         </svg>
     </h2>
 
@@ -102,25 +102,24 @@
     <button type="button" class="button-next swiper-next" aria-label="Swipe next">
         <span class="icon-container">
             <svg class="icon-down" width="20" height="32">
-                <use href="../img/support-ukraine/ua-swiper.svg#icon-fi-rr-angle-small-left"></use>
+                <use href="../assets/img/support-ukraine/ua-swiper.svg#icon-fi-rr-angle-small-left"></use>
             </svg>
         </span>
     </button>
 </div>
-
-
       </div>
     </div>
     <div class="content">
+      <div class="to-top-target"></div>
       <div class="home-container">
     <h2 class="main-title">
         Best Seller
         <span class="span-books">Books</span>
     </h2>
 
-    <div id="categoryContainer">
-        <a class="scroll-app" href="../index.html">Тут кнопка</a>
-    </div>
+    <!-- <div id="categoryContainer">
+        <a class="scroll-app" href="./scroll-up.html">Тут кнопка</a>
+    </div> -->
 </div>
       <div class="categories-books">
   <h2 class="category-name"></h2>
@@ -177,6 +176,13 @@
     <p class="footer-text"> &copy; 2023 | All Rights Reserved | Developed by GoIT
     Students </p>
 </footer>
+
+
+  <button type="button" class="back-to-top hidden" aria-label="Scroll to top">
+    <svg class="button-icon button-icon--arrow" width="24" height="25">
+        <use href="../assets/img/arrow-up.svg#icon-arrow-back"></use>
+    </svg>
+</button>
 
   
 </body>
