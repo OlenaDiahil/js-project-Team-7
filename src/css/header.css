@@ -4,13 +4,13 @@
   width: 40px;
   height: 24px;
   margin-right: 14px;
+  margin-left: auto;
 }
 
 @media screen and (min-width: 768px) {
   .header-switcher {
     margin-right: 24px;
-    margin-left: auto;
-  }
+    }
 }
 
 .switcher-button {
@@ -58,20 +58,45 @@
   border: 1.5px solid var(--header-border-color);
   border-radius: 0px 0px 8px 8px;
   display: flex;
-  /* justify-content: space-between; */
   align-items: center;
- /*  height: 64px; */
- padding-top: 20px;
- padding-bottom: 20px;
+  padding: 20px 20px 20px 20px;
+
   }
 
   @media screen and (min-width:768px) {
  .header-overlay {
-/*   height: 72px; */
-  /* justify-content: space-between; */
-  padding-top: 14px;
- padding-bottom: 14px;
+  padding: 14px 32px 13px 32px;
  }
+}
+
+@media screen and (min-width:1440px) {
+  .header-overlay {
+   padding: 14px 24px 13px 24px;
+  }
+ }
+
+.header-logo-link {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (min-width:768px) {
+  .header-logo-link {
+      margin-right: 40px;
+      }
+ }
+ @media screen and (min-width: 1440px) { 
+  .header-logo-link { 
+      margin-right: 76px;
+  }}
+
+.header-logo  {
+  margin-right: 8px;
+  }
+
+.header-logo-bookshelf
+{
+  fill: var(--header-logo-color);
 }
 
 .site-nav  {
@@ -81,66 +106,35 @@
 @media screen and (min-width:768px) {
   .site-nav {
    display: flex;
-
+   text-align: center;
+   align-items: center;
+   justify-content: center;
+   gap: 16px;
   }
  }
 
-
-
- @media screen and (min-width:1200px) {
+ @media screen and (min-width:1440px) {
   .site-nav {
-   margin-right: auto;
-
+    gap: 24px;
   }
- }
- .header-logo  {
-  margin-right: 8px;
-}
-
-.header-logo-link {
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.12;
-  letter-spacing: -0.04em;
-  display: flex;
-  align-items: center;
-  margin-right: 144px;
-  margin-left: 20px;
-   color: var(--header-logo-color);
-}
-@media screen and (min-width:768px) {
-  .header-logo-link {
-    margin-left: 32px;
-    margin-right: 40px;
-      }
- }
- @media screen and (min-width: 1440px) { 
-  .header-logo-link { 
-    margin-left: 24px;
-    margin-right: 76px;
-  }}
-
-
- @media screen and (min-width:768px) {
-.site-nav__item {
-  padding-left: 16px;
-
-}
- }
+  }
+ 
  @media screen and (min-width:768px) {
 .site-nav__item_active {
-  border-radius: 36px;
-  padding: 8px 16px; 
-   font-family: inherit;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.28;
-  letter-spacing: -0.04em;
-  text-transform: uppercase;
   display: flex;
+  padding: 8px 16px;
+  align-items: flex-start;
+  gap: 10px;
+  font-family: DM Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: -0.56px;
+  text-transform: uppercase;
   align-items: center;
   color: #111;
+  border-radius: 36px;
 }}
 
 @media screen and (min-width:768px) {
@@ -148,10 +142,9 @@
   background-color: var(--header-nav-hover);
 }
 }
-
 @media screen and (min-width:768px) {
-.site-nav__link {
-  font-family: inherit;
+.site-nav__item {
+  color: var(--text-color-main);
   font-family: DM Sans;
   font-size: 14px;
   font-style: normal;
@@ -159,30 +152,31 @@
   line-height: 18px;
   letter-spacing: -0.56px;
   text-transform: uppercase;
-  color: var(--text-color-main);
+  
+
 
 }}
 @media screen and (min-width:768px) {
-.site-nav__logo {
-  width: 20px;
-  height: 20px;
-  fill: var(--header-icons-color);
-  margin-left: 4px;
+.site-nav__link {
+  display: flex;
   justify-content: center;
   align-items: center;
-  }}
-@media screen and (min-width:768px) {
-.site-nav__logo_active {
-  width: 20px;
-  height: 20px;
-  margin-left: 4px;
- 
-  
+  text-align: center;
+  gap: 4px;
 }}
+
+
+@media screen and (min-width:768px) {
+.site-nav__logo {
+  fill: var(--header-icons-color);
+
+  }}
+
 
 .sign-up-button {
   display: none;
 }
+
 @media screen and (min-width:768px) {
 .sign-up-button {
   display: flex;
@@ -202,20 +196,23 @@
   align-items: center;
   padding-left:14px;
   padding-right:14px;
-  margin-right: 32px;
-}
+    }
 }
 
-
+@media screen and (min-width:768px) {
+  .sign-up-button_icon{ 
+    fill:#EAC645;
+}}
 
 .burger-menu {
-  width: 28px;
-  height: 28px;
   background-color: transparent;
   border: none;
   stroke: var(--header-icons-color);
 }
-
+.burger-menu:hover
+.burger-menu:focus {
+  color: var(--header-icons-hover);
+}
 
 @media screen and (min-width:768px) {
 .burger-menu {

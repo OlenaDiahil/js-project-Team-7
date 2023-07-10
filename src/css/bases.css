@@ -28,6 +28,10 @@
             /* Hover for caregories  */
     --hover-categories: #4F2EE8;
 
+            /* Color for text All categories and scroll  */
+    --all-categories-text:rgba(17, 17, 17, 0.60);
+    --scroll-all-categories:#E0E0E0;
+
 
             /* Color for name category and author book */
     --grey-title-color: #b4afaf;
