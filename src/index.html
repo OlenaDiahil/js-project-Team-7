@@ -11,15 +11,25 @@
 </head>
 
 <body>
-  <load src="partials/header.html" />
-  <load src="partials/burger-menu.html" />
-  <aside class="sidebar">
-    <load src="partials/all-categories-list.html" />
-    <load src="partials/support-ukraine.html" />
-  </aside>
-  <load src="partials/best-sellers.html" />
-  <load src="partials/all-categories-cards.html" />
-  <load src="partials/modal-window.html" />
+  <div class="header">  
+    <load src="partials/header.html" />
+    <load src="partials/burger-menu.html" />
+  </div>
+  <div class="container">
+    <div class="sidebar">
+      <div class="categories">
+        <load src="partials/all-categories-list.html" />
+      </div>
+      <div class="sup-ukr">
+        <load src="partials/support-ukraine.html" />
+      </div>
+    </div>
+    <div class="content">
+      <load src="partials/best-sellers.html" />
+      <load src="partials/all-categories-cards.html" />
+      <load src="partials/modal-window.html" />
+    </div>
+  </div>
   <load src="partials/footer.html" />
 
   <script type="module" src="/index.js"></script>
