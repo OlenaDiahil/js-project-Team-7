@@ -87,6 +87,7 @@
 
 @media screen and (min-width: 1440px) {
     .categories-books {
+        display: inline-flex;
         width: 996px;
         margin-left: 40px;
     }
