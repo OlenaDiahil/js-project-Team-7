@@ -42,7 +42,6 @@ export function openModal(bookId) {
       bookShopApple.href = buy_links[1].url;
       bookShopBookshop.href = buy_links[4].url;
 
-
       const shoppingListButton = document.querySelector(
         '.modal_btn_book_addShop'
       );
