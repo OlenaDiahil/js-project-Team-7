@@ -7,7 +7,7 @@ const categoryBooksEl = document.querySelector('.categories-books');
 const categoryNameEl = document.querySelector('.category-name');
 const bookWrapperEL = document.querySelector('.category-books-wrap');
 const bestSellersElmnt = document.querySelector('.home-container');
-const modal = document.querySelector('.modal');
+
 
 creatAllCategories();
 
