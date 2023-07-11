@@ -1,5 +1,6 @@
 import { fetchCategories, fetchCategoryBooks } from "./category-api/category-api";
 import { openModal } from "./modal-window";
+import Notiflix from 'notiflix';
 
 const categoryListEl = document.querySelector('.categories_list');
 const allCategoriesBtnEl = document.querySelector('.all-categories-active');
@@ -8,16 +9,13 @@ const categoryNameEl = document.querySelector('.category-name');
 const bookWrapperEL = document.querySelector('.category-books-wrap');
 const bestSellersElmnt = document.querySelector('.home-container');
 
-
+// З АРІ рендеримо категорії книг
 creatAllCategories();
-
-categoryListEl.addEventListener('click', clikOnCategory)
 
 function creatAllCategories () {
     fetchCategories().then((category) => { renderCategories(category) })
-        .catch(error => Notiflix.Notify.failure('Oops! Something went wrong! Try reloading the page!', 1000, selectError()));
+        .catch(error => Notiflix.Notify.failure("Failed to retrieve the list of categories!", 4000));
   };
-
 
 function renderCategories(category) {
     const markup = category.map(({ list_name }) => {
@@ -32,6 +30,10 @@ function renderCategories(category) {
    
 };
 
+// Створюємо секцію книги за категоріями при кліку на категорію
+
+categoryListEl.addEventListener('click', clikOnCategory)
+
 async function clikOnCategory(event) {
 
     allCategoriesBtnEl.classList.remove('all-categories-active');
@@ -43,21 +45,24 @@ async function clikOnCategory(event) {
         categoryBooksEl.classList.add('visually-hidden');
         return
     }
+
+    categoryNameEl.innerHTML = "";
    
     deleteCategoryBooks();
 
     const response = await fetchCategoryBooks(categoryName).then(data => {
         if (data.list_name === "") {
-            return
+            Notiflix.Notify.info("This category doesn't contain any books!", 4000)
+            return 
         }
         console.log(data);
         bestSellersElmnt.classList.add('visually-hidden');
         categoryBooksEl.classList.remove('visually-hidden');
     
         renderCategoryBooks(data);
-        categoryNameEl.textContent = categoryName;
+        creatCategoryName(categoryName)
     })
-        .catch(error => Notiflix.Notify.failure('Oops! Something went wrong! Try reloading the page!', 1000, selectError()));
+        .catch(error => Notiflix.Notify.info("This category doesn't contain any books!", 4000));
          
 };
   
@@ -76,7 +81,7 @@ function renderCategoryBooks(data) {
     bookItemElements.forEach(bookItem => {
     bookItem.addEventListener('click', () => {
     const bookId = bookItem.id;
-    openModal(bookId); // Виклик функції openModal() з передачею bookId
+    openModal(bookId); // Виклик функції openModal() з передачею bookId для Modal
     });
   });
 }
@@ -85,3 +90,16 @@ function deleteCategoryBooks() {
     bookWrapperEL.innerHTML = "";
 }
 
+// Функція для виділення останнього слова назви категорії іншим кольором
+
+function creatCategoryName(str) {
+
+    let nameCategory = str.split(' ');
+    const lastWord = nameCategory[nameCategory.length - 1];
+    nameCategory.pop();
+
+    const firstsWords = nameCategory.join(" ");
+    
+    const marcupColoredWord = `<h2 class="category-name-first-words">${firstsWords} <span class="category-name-last-word">${lastWord}</span></h2>`;
+    categoryNameEl.insertAdjacentHTML('afterbegin', marcupColoredWord);
+}
