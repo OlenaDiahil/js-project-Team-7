@@ -73,9 +73,12 @@ function renderCategoryBooks(data) {
     bookWrapperEL.insertAdjacentHTML('beforeend', markup);
 
     const bookItemElements = document.querySelectorAll('.category-book-wrapper');
-    bookItemElements.forEach(bookItem => {bookItem.addEventListener('click', function () {
-        openModal();});
+    bookItemElements.forEach(bookItem => {
+    bookItem.addEventListener('click', () => {
+    const bookId = bookItem.id;
+    openModal(bookId); // Виклик функції openModal() з передачею bookId
     });
+  });
 }
 
 function deleteCategoryBooks() {
