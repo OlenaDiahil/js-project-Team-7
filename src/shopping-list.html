@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bookshelf</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css">
@@ -11,14 +11,17 @@
   <body>
     
     <load src="partials/header.html" />
-    <load src="partials/support-ukraine.html" />
-    <load src="partials/shopping-list.html" />
-    <load src="partials/pagination.html" />
+    <div class="container-shopping-list">
+      <div class="shoppingList-suppot">
+        <load src="partials/support-ukraine.html" />
+      </div>
+      <load src="partials/shopping-list.html" />
+      <load src="partials/pagination.html" />
+    </div>
     <load src="partials/footer.html" />
-    
 
+    <load src="partials/scroll-up.html" />
+    
     <script type="module" src="/index.js"></script>
-    <script type="module" src="./js/support-ukraine/fonds.js"></script>
-    <script type="module" src="./js/support-ukraine/support-ukraine.js"></script>
   </body>
 </html>

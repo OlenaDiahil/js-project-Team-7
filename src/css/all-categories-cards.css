@@ -1,14 +1,13 @@
 .categories-books {
-    width: 335px;
+    max-width: 335px;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 40px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .category-name {
-    color: #111111;
+    color: var(--text-color-main);
     font-family: 'DM Sans', sans-serif;
     font-size: 32px;
     font-style: normal;
@@ -28,7 +27,7 @@
 }
 
 .category-name-book {
-    color: #111;
+    color: var(--text-color-main);
     font-family: 'DM Sans', sans-serif;
     font-size: 16px;
     font-style: normal;
@@ -46,8 +45,12 @@
     row-gap: 40px;
 }
 
+.category-book-wrapper {
+    cursor: pointer;
+}
+
 .category-name-autor {
-    color: #B4AFAF;
+    color: var(--grey-title-color);
     font-family: 'DM Sans', sans-serif;
     font-size: 12px;
     font-style: italic;
@@ -60,13 +63,12 @@
 
 @media screen and (min-width: 768px) {
     .categories-books {
-        width: 704px;
-        margin-left: 32px;
-        margin-right: 0;
+        max-width: 704px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .category-name {
-        color: #111111;
         font-size: 48px;
         line-height: 52px;
         letter-spacing: -1.92px;
@@ -87,13 +89,10 @@
 
 @media screen and (min-width: 1440px) {
     .categories-books {
-        display: inline-flex;
-        width: 996px;
-        margin-left: 40px;
+        max-width: 996px;
     }
 
     .category-name {
-        color: #111111;
         font-size: 48px;
         line-height: 52px;
         letter-spacing: -1.92px;

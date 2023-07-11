@@ -1,0 +1,46 @@
+.to-top-target {
+  height: 15vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 50px;
+  z-index: 10;
+
+  height: 54px;
+  width: 54px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--header-icons-hover);
+  border: 5px solid transparent;
+  border-radius: 50%;
+  box-shadow: 0px 0px 0px 5px rgba(79, 46, 232, 0.3);
+}
+
+.back-to-top:hover,
+.back-to-top:focus {
+  transform: scale(1.2);
+}
+
+.back-to-top.transition {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 300ms ease-in, visibility 300ms ease-in, transform 1s;
+}
+
+.back-to-top.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.button-icon--arrow {
+  fill: var(--header-background-color);
+  transition: fill 500ms ease-in-out;
+}

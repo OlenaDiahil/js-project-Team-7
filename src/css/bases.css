@@ -28,6 +28,10 @@
             /* Hover for caregories  */
     --hover-categories: #4F2EE8;
 
+            /* Color for text All categories and scroll  */
+    --all-categories-text:rgba(17, 17, 17, 0.60);
+    --scroll-all-categories:#E0E0E0;
+
 
             /* Color for name category and author book */
     --grey-title-color: #b4afaf;
@@ -46,6 +50,7 @@
 
     --duration: 250ms;
     --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     /* // Font weight */
     --regular: 400;
@@ -59,33 +64,46 @@
     --desktop-wide: 1440px;
 }
 
+body {
+    margin: 0;
+}
+
 .container {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 40px;
+    padding: 0 24px;
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px
 }
 
-@media screen and (min-width: var(--mobile)) {
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 86px;
+}
+
+@media (max-width: 1440px) {
     .container {
-        max-width: 335px;
-        padding-left: 20px;
-        padding-right: 20px;
+        flex-direction: column;
+        gap: 100px;
+        padding: 0 32px;
+    }
+
+    .sidebar {
+        flex-direction: row;
+        gap: 32px;
     }
 }
 
-@media screen and (min-width: var(--tablet)) {
+@media (max-width: 768px) {
     .container {
-        max-width: 704px;
-        padding-left: 32px;
-        padding-right: 32px;
+        gap: 40px;
+        padding: 0 20px;
     }
-}
 
-@media screen and (min-width: var(--desktop-wide)) {
-    .container {
-        max-width: 1392px;
-        padding-left: 24px;
-        padding-right: 24px;
+    .sidebar {
+        flex-direction: column;
+        gap: 40px;
     }
 }
 

@@ -1,4 +1,5 @@
 import { fetchCategories, fetchCategoryBooks } from "./category-api/category-api";
+import { openModal } from "./modal-window";
 
 const categoryListEl = document.querySelector('.categories_list');
 const allCategoriesBtnEl = document.querySelector('.all-categories-active');
@@ -6,6 +7,7 @@ const categoryBooksEl = document.querySelector('.categories-books');
 const categoryNameEl = document.querySelector('.category-name');
 const bookWrapperEL = document.querySelector('.category-books-wrap');
 const bestSellersElmnt = document.querySelector('.home-container');
+const modal = document.querySelector('.modal');
 
 creatAllCategories();
 
@@ -69,9 +71,17 @@ function renderCategoryBooks(data) {
     })
     .join("");
     bookWrapperEL.insertAdjacentHTML('beforeend', markup);
+
+    const bookItemElements = document.querySelectorAll('.category-book-wrapper');
+    bookItemElements.forEach(bookItem => {
+    bookItem.addEventListener('click', () => {
+    const bookId = bookItem.id;
+    openModal(bookId); // Виклик функції openModal() з передачею bookId
+    });
+  });
 }
 
-async function deleteCategoryBooks() {
+function deleteCategoryBooks() {
     bookWrapperEL.innerHTML = "";
 }
 

@@ -1,0 +1,151 @@
+.burger-menu {
+    background: radial-gradient(183.6% 183.01% at 59.76% -23.42%,#4f2ee8 18.03%,#fff 100%);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    } 
+
+.container-burger-top {
+    background-color: var(--header-background-color);
+    border: 1.5px solid var(--header-border-color);
+    border-radius: 0px 0px 8px 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px 20px 20px 20px;
+}
+
+.burger-close-btn {
+    background-color: transparent;
+    border: none;
+    stroke: var(--header-icons-color);
+}
+.burger-close-btn:hover,
+.burger-close-btn:focus {
+    stroke: var(--header-icons-hover)
+}
+
+
+
+.user-photo-name{
+display: flex;  
+align-items: center;
+margin-left: 20px;
+margin-top: 20px;
+gap: 9px;}
+
+.user-name  {
+    color: #FFF;
+    font-family: DM Sans;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.44px;
+}
+
+
+.div-burger-nav {
+    display: block;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 130px;
+}
+
+.burger-link-active{
+    padding: 8px 16px;
+    align-items: flex-start;
+    color: #111;
+    font-family: DM Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: -0.56px;
+    text-transform: uppercase;
+    border-radius: 36px;
+    
+}
+.current {
+    background-color: var(--header-nav-hover);}
+
+.burger-link {color: #FFF;
+    font-family: DM Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: -0.56px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    }
+.burger-nav {
+    display: block;
+
+}
+ 
+.burger-nav-item {
+    margin-bottom: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+ 
+.site-nav-logo-burger {
+fill: #ffffff;
+
+}
+
+.background-burger {
+width: 100%;
+
+
+}
+
+.button-log-out {
+
+    display: flex;
+    width: 118px;
+    height: 48px;
+    border: 1.5px solid #111;
+    background-color: #FFF;
+    color: #111;
+    font-family: DM Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: -0.56px;
+    border-radius: 18px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 4px;
+    margin-left: 20px;
+}
+
+
+.burger-menu-icon {
+    fill:#EAC645; }
+
+.burger-btn-background {
+    position: relative;
+
+}
+
+
+.burger-btn-background .button-log-out {
+    position: absolute;
+    bottom: 20%;
+
+}

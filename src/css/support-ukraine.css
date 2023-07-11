@@ -58,15 +58,12 @@
   height: 292px;
   overflow: hidden;
 }
-@media screen and (min-width: 720px) {
-  .swiper {
-    height: 292px;
-  }
-}
 
 .swiper-slide {
   display: flex !important;
   height: auto !important;
+  padding-bottom: 20px;
+  margin: 0 !important;
 }
 
 .icon-container {
@@ -96,13 +93,27 @@
 }
 
 .support-list {
-  display: flex;
   flex-direction: column;
-  gap: 20px;
 }
 
 .support-link {
   height: 32px;
   display: flex;
   align-items: center;
+}
+@media (max-width: var(--tablet)) {
+  .support-ukraine {
+    height: 472px;
+  }
+}
+
+@media (max-width: var(--mobile)) {
+  .support-ukraine {
+    height: 352px;
+  }
+}
+@media screen and (min-width: 720px) {
+  .swiper {
+    height: 292px;
+  }
 }
