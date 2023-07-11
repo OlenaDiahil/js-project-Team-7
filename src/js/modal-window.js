@@ -42,6 +42,17 @@ export function openModal(bookId) {
       bookShopElement.innerHTML = '';
 
       // Додавання посилань на майданчики
+
+      
+      // Збереження даних у LocalStorage
+      const modalData = {
+        book_image,
+        author,
+        title,
+        description,
+        marketplaces,
+      };
+      localStorage.setItem('modalData', JSON.stringify(modalData));
     })
     .catch(error => {
       console.log('Помилка при отриманні даних про книгу:', error);
