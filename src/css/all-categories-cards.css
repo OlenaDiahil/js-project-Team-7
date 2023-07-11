@@ -7,6 +7,10 @@
 }
 
 .category-name {
+    margin-bottom: 40px;
+}
+
+.category-name-first-words {
     color: var(--text-color-main);
     font-family: 'DM Sans', sans-serif;
     font-size: 32px;
@@ -14,8 +18,10 @@
     font-weight: 700;
     line-height: 38px;
     letter-spacing: -1.28px;
+}
 
-    margin-bottom: 40px;
+.category-name-last-word {
+    color: #4F2EE8;
 }
 
 
@@ -68,7 +74,7 @@
         margin-right: auto;
     }
 
-    .category-name {
+    .category-name-first-words {
         font-size: 48px;
         line-height: 52px;
         letter-spacing: -1.92px;
@@ -92,7 +98,7 @@
         max-width: 996px;
     }
 
-    .category-name {
+    .category-name-first-words {
         font-size: 48px;
         line-height: 52px;
         letter-spacing: -1.92px;
