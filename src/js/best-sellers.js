@@ -1,6 +1,5 @@
 import { openModal } from './modal-window';
 
-
 document.addEventListener('DOMContentLoaded', function () {
   const categoryContainer = document.querySelector('#categoryContainer');
 
@@ -39,8 +38,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 document.querySelectorAll('.book-item');
               bookBestItemElements.forEach(bookBestItem => {
                 bookBestItem.addEventListener('click', () => {
-                const bookId = bookBestItem.id;
-                openModal(bookId);
+                  const bookId = bookBestItem.id;
+                  openModal(bookId);
                 });
               });
 
@@ -68,7 +67,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 'Немає популярних книг для цієї категорії';
               categoryElement.appendChild(noBooksMessageElement);
             }
-            
           })
           .catch(error => {
             console.log(
@@ -88,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
 function createBookItemElement(book) {
   const bookItemElement = document.createElement('li');
   bookItemElement.classList.add('book-item');
-   bookItemElement.id = `${book._id}`;
+  bookItemElement.id = `${book._id}`;
 
   const bookImageElement = document.createElement('img');
   bookImageElement.src = book.book_image;
