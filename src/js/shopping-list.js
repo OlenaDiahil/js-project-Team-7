@@ -1,16 +1,33 @@
+
+
 const KEY_SL = 'bookList';
-let imgEmpryBig = new URL('/src/assets/img/empty-page@2.png', import.meta.url);
-let imgEmpry = new URL('/src/assets/img/empty-page.png', import.meta.url);
-let imgchop1 = new URL('/src/assets/img/shop1.png', import.meta.url);
-let imgchop2 = new URL('/src/assets/img/shop2.png', import.meta.url);
-let imgchop3 = new URL('/src/assets/img/shop3.png', import.meta.url);
-let imgIcon = new URL('/src/assets/img/trash-03.png', import.meta.url);
+let imgEmpryBig = new URL('/src/images/empty-page@2.png', import.meta.url);
+let imgEmpry = new URL('/src/images/empty-page.png', import.meta.url);
+let imgchop1 = new URL('/src/images/shop1.png', import.meta.url);
+let imgchop2 = new URL('/src/images/shop2.png', import.meta.url);
+let imgchop3 = new URL('/src/images/shop3.png', import.meta.url);
+let imgIcon = new URL('/src/images/trash-03.png', import.meta.url);
 
 const ulMarkupSL = document.querySelector('.books-shoppingList');
 
 let loadData = localStorage.getItem(KEY_SL);
 let parsedData = JSON.parse(loadData);
 
+// ---------------------екран------------------
+// (function limitVW() {
+//   const vw = Math.max(
+//     document.documentElement.clientWidth || 0,
+//     window.innerWidth || 0
+//   );
+//   if (vw < 768) {
+//     limitSlp = 4;
+//     return limitSlp;
+//   } else {
+//     limitSlp = 3;
+//     return limitSlp;
+//   }
+// })();
+// ----------------------------
 function loadBookSL() {
   if (parsedData && parsedData.length > 0) {
     markupBookContent(parsedData);
@@ -136,4 +153,13 @@ function deliteBookId() {
   }
 }
 
+// const buttonClickUser = document.querySelector('.user-bar-item');
+// loginedUserButton.addEventListener('click', userBarButtonClick);
+// function userBarButtonClick() {
+//   buttonClickUser.classList.toggle('is-active');
+// }
 
+// function logOutButtonClick() {
+//   buttonClickUser.classList.remove('is-active');
+//   location.href = './';
+// }
