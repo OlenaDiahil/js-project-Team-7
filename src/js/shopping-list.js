@@ -1,17 +1,20 @@
 
 const KEY_SL = 'shoppingList';
-let imgEmpryBig = new URL('/src/assets/img/empty-page@2.png', import.meta.url);
-let imgEmpry = new URL('/src/assets/img/empty-page.png', import.meta.url);
-let imgchop1 = new URL('/src/assets/img/shop1.png', import.meta.url);
-let imgchop2 = new URL('/src/assets/img/shop2.png', import.meta.url);
-let imgchop3 = new URL('/src/assets/img/shop3.png', import.meta.url);
-let imgIcon = new URL('/src/assets/img/trash-03.png', import.meta.url);
+let imgEmpryBig = new URL('/assets/img/shopping-list/empty-page@2.png', import.meta.url); 
+let imgEmpry = new URL('/assets/img/shopping-list/empty-page.png', import.meta.url);
+let imgchop1 = new URL('/assets/img/shopping-list/shop1.png', import.meta.url);
+let imgchop2 = new URL('/assets/img/shopping-list/shop2.png', import.meta.url);
+let imgchop3 = new URL('/assets/img/shopping-list/shop3.png', import.meta.url);
+let imgIcon = new URL('/assets/img/shopping-list/trash-03.png', import.meta.url);
 
 const ulMarkupSL = document.querySelector('.books-shoppingList');
 
 let loadData = localStorage.getItem(KEY_SL);
 let parsedData = JSON.parse(loadData);
-console.log(parsedData)
+ 
+console.log(parsedData[0].bookData.book_image)
+
+window.addEventListener("load", loadBookSL);
 
 function loadBookSL() {
   if (parsedData && parsedData.length > 0) {
@@ -38,20 +41,20 @@ const markupBookZoro = `<li><p class="shoppingList-text">
 function markupBookContent(parsedData) {
   ulMarkupSL.innerHTML = '';
   const markupBookLi = parsedData
-    .map(parsedData => {
+    .map((parsedData) => {
       return `<li class="books-shoppingListLi">
                 <img
                   class="books-shoppingList-img"
-                  src="${parsedData.image}"
+                  src="${parsedData.bookData.book_image}"
                   alt=""
                 />
                 <div class="box-shoppingList-content">
                   <div id="cont" class="box-shoppingList">
                     <div>
-                      <h2 class="text-shoppingList-title">${parsedData.title}</h2>
-                      <p class="text-shoppingList-category">${parsedData.publisher}</p>
+                      <h2 class="text-shoppingList-title">${parsedData.bookData.title}</h2>
+                      <p class="text-shoppingList-category">${parsedData.bookData.publisher}</p>
                     </div>
-                    <button class="box-shoppingList-trash" id="${parsedData.id}">
+                    <button class="box-shoppingList-trash" id="${parsedData.bookData.bookId}">
                        <img
                             class="box-shoppingList-trash-icon"
                             src="${imgIcon}"
@@ -62,10 +65,10 @@ function markupBookContent(parsedData) {
                     </button>
                   </div>
                   <p class="text-shoppingList-content">
-                    ${parsedData.description}
+                    ${parsedData.bookData.description}
                   </p>
                   <div class="box-shoppingList-link">
-                    <p class="text-shoppingList-author">${parsedData.author}</p>
+                    <p class="text-shoppingList-author">${parsedData.bookData.author}</p>
                     <ul class="box-shoppingList-shop">
                       <li>
                         <a
