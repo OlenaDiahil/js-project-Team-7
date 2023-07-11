@@ -32,7 +32,6 @@ export function openModal(bookId) {
       const bookShopBookshop = document.querySelector(
         '.modal_window_icon_book-shop'
       );
-      
 
       bookImgElement.src = book_image;
       bookNameElement.textContent = title;
