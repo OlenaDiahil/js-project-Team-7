@@ -1,3 +1,4 @@
+
 const KEY_SL = 'bookList';
 let imgEmpryBig = new URL('/src/assets/img/empty-page@2.png', import.meta.url);
 let imgEmpry = new URL('/src/assets/img/empty-page.png', import.meta.url);
@@ -104,7 +105,7 @@ function markupBookContent(parsedData) {
                             src="${imgchop3}"
                             alt=""
 
-                            />       
+/>       
                         </a>
                       </li>
                     </ul>
@@ -135,5 +136,3 @@ function deliteBookId() {
     });
   }
 }
-
-
