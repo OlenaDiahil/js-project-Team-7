@@ -1,5 +1,5 @@
 
-const KEY_SL = 'bookList';
+const KEY_SL = 'shoppingList';
 let imgEmpryBig = new URL('/src/assets/img/empty-page@2.png', import.meta.url);
 let imgEmpry = new URL('/src/assets/img/empty-page.png', import.meta.url);
 let imgchop1 = new URL('/src/assets/img/shop1.png', import.meta.url);
@@ -11,6 +11,7 @@ const ulMarkupSL = document.querySelector('.books-shoppingList');
 
 let loadData = localStorage.getItem(KEY_SL);
 let parsedData = JSON.parse(loadData);
+console.log(parsedData)
 
 function loadBookSL() {
   if (parsedData && parsedData.length > 0) {

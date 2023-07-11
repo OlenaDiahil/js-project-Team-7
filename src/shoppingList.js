@@ -1,0 +1,9 @@
+import './js/header';
+import './js/burger-menu';
+import './js/color-schemes';
+import './js/list-templates';
+import './js/support-ukraine/support-ukraine';
+import './js/shopping-list';
+import './js/pagination';
+import './js/footer';
+import './js/refs';
