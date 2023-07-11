@@ -1,14 +1,17 @@
-(() => {
-    const refs = {
-      openBurgerBtn: document.querySelector("[data-menu-open]"),
-      closeBurgerBtn: document.querySelector("[data-menu-close]"),
-      menu: document.querySelector("[data-menu]"),
-    };
+const mobileMenu = document.querySelector('.menu-container');
+const btnMenu = document.querySelector('.button-menu');
+
+
+btnMenu.addEventListener('click', onBtnMenuClick);
+
+function onBtnMenuClick() {
+  btnMenu.classList.toggle('active');
+  mobileMenu.classList.toggle('is-open');
   
-    refs.openBurgerBtn.addEventListener("click", toggleMenu);
-    refs.closeBurgerBtn.addEventListener("click", toggleMenu);
-  
-    function toggleMenu() {
-      refs.menu.classList.toggle("is-hidden");
-    }
-  })();
+  if (mobileMenu.classList.contains('is-open')) {
+    document.body.style.overflow = 'hidden';
+  } else {
+
+    document.body.style.overflow = 'auto';
+  }
+};
