@@ -107,14 +107,14 @@ body.modal-open {
 }
 
 .modal_btn_book_addShop {
-  max-width: 211px;
-  max-height: 46px;
+  max-width: 268px;
+  max-height: 68px;
   padding: 14px 24px;
   border-radius: 40px;
   border: 2px solid #4f2ee8;
   color: var(--text-color-main);
   font-family: DM Sans;
-  font-size: 14px;
+  font-size: 13px;
   font-style: normal;
   font-weight: 700;
   line-height: 1.28;
@@ -143,14 +143,18 @@ body.modal-open {
   .modal_container {
     max-width: 335px;
   }
+  .book_img {
+  max-width: 280px;
+  
+}
   .modal_btn_book_addShop {
-    margin-left: 38px;
+     max-height: 46px;
   }
 }
 @media screen and (min-width: 764px) {
   .modal_container {
     max-width: 579px;
-    max-height: 465px;
+    max-height: 470px;
     padding: 40px 40px;
   }
   .modal_window_information {
@@ -187,7 +191,7 @@ body.modal-open {
     font-size: 18px;
     line-height: 1.33;
     letter-spacing: -0.18px;
-    padding: 20px 140px;
+    padding: 20px 96px;
     margin-left: 0;
   }
 }
