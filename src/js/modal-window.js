@@ -46,14 +46,7 @@ export function openModal(bookId) {
       );
       const shoppingList =
         JSON.parse(localStorage.getItem('shoppingList')) || [];
-      let bookIndex = -1;
-
-      for (let i = 0; i < shoppingList.length; i++) {
-        if (shoppingList[i].bookId === bookId) {
-          bookIndex = i;
-          break;
-        }
-      }
+      const bookIndex = shoppingList.findIndex(book => book.bookId === bookId);
 
       if (bookIndex !== -1) {
         shoppingListButton.textContent = 'Remove from the shopping list';
@@ -63,13 +56,11 @@ export function openModal(bookId) {
 
       shoppingListButton.addEventListener('click', () => {
         if (bookIndex !== -1) {
-          removeBookFromList(bookIndex);
+          removeBookFromList(bookId);
           shoppingListButton.textContent = 'Add to shopping list';
-          bookIndex = -1; // Скидаємо значення bookIndex після видалення книги
         } else {
           addBookToList(bookId, bookData);
           shoppingListButton.textContent = 'Remove from the shopping list';
-          bookIndex = shoppingList.length - 1; // Оновлюємо значення bookIndex після додавання книги
         }
       });
     })
@@ -86,26 +77,16 @@ function closeModal() {
 
 function addBookToList(bookId, bookData) {
   const shoppingList = JSON.parse(localStorage.getItem('shoppingList')) || [];
-  let existingBookIndex = -1;
+  const existingBook = shoppingList.find(book => book.bookId === bookId);
 
-  for (let i = 0; i < shoppingList.length; i++) {
-    if (shoppingList[i].bookId === bookId) {
-      existingBookIndex = i;
-      break;
-    }
+  if (!existingBook) {
+    shoppingList.push({ bookId, bookData });
+    localStorage.setItem('shoppingList', JSON.stringify(shoppingList));
   }
-
-  if (existingBookIndex !== -1) {
-    shoppingList[existingBookIndex].bookData = bookData; // Оновлюємо дані про книгу
-  } else {
-    shoppingList.push({ bookId, bookData }); // Додаємо нову книгу до списку
-  }
-
-  localStorage.setItem('shoppingList', JSON.stringify(shoppingList));
 }
 
-function removeBookFromList(bookIndex) {
-  const shoppingList = JSON.parse(localStorage.getItem('shoppingList')) || [];
-  shoppingList.splice(bookIndex, 1);
+function removeBookFromList(bookId) {
+  let shoppingList = JSON.parse(localStorage.getItem('shoppingList')) || [];
+  shoppingList = shoppingList.filter(book => book.bookId !== bookId);
   localStorage.setItem('shoppingList', JSON.stringify(shoppingList));
 }

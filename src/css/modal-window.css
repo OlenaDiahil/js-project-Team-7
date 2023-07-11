@@ -39,10 +39,11 @@ body.modal-open {
   padding: 40px 24px;
 }
 .book_img {
-  max-width: 287px;
+  max-width: 230px;
   max-height: 408px;
   border-radius: 8px;
 }
+
 .modal_book_img {
   margin-bottom: 14px;
 }
@@ -160,6 +161,9 @@ body.modal-open {
     max-height: 281px;
     margin-right: 24px;
   }
+  .modal_book_img{
+    margin-bottom: 40px;
+  }
   .modal_name_book {
     font-size: 24px;
     line-height: 1.16;
@@ -176,9 +180,6 @@ body.modal-open {
     line-height: 18px;
     letter-spacing: -0.56px;
     margin-bottom: 20px;
-  }
-  .modal_window_bookShop {
-    margin-bottom: 116px;
   }
   .modal_btn_book_addShop {
     max-width: 499px;
