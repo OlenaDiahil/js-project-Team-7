@@ -1,4 +1,7 @@
-document.addEventListener('DOMContentLoaded', function() {
+import { openModal } from './modal-window';
+
+
+document.addEventListener('DOMContentLoaded', function () {
   const categoryContainer = document.querySelector('#categoryContainer');
 
   // Отримуємо доступ до категорій книг за допомогою API
@@ -15,7 +18,9 @@ document.addEventListener('DOMContentLoaded', function() {
         categoryElement.appendChild(categoryTitleElement);
 
         // Отримуємо популярні книги для кожної категорії
-        fetch(`https://books-backend.p.goit.global/books/category?category=${category.list_name}`)
+        fetch(
+          `https://books-backend.p.goit.global/books/category?category=${category.list_name}`
+        )
           .then(response => response.json())
           .then(data => {
             const books = data;
@@ -30,6 +35,14 @@ document.addEventListener('DOMContentLoaded', function() {
               });
 
               categoryElement.appendChild(bookListElement);
+              const bookBestItemElements =
+                document.querySelectorAll('.book-item');
+              bookBestItemElements.forEach(bookBestItem => {
+                bookBestItem.addEventListener('click', () => {
+                const bookId = bookBestItem.id;
+                openModal(bookId);
+                });
+              });
 
               if (books.length > 5) {
                 const seeMoreButtonElement = document.createElement('button');
@@ -38,7 +51,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 categoryElement.appendChild(seeMoreButtonElement);
 
                 seeMoreButtonElement.addEventListener('click', () => {
-                  const bookListElement = categoryElement.querySelector('.book-list');
+                  const bookListElement =
+                    categoryElement.querySelector('.book-list');
 
                   books.slice(5).forEach(book => {
                     const bookItemElement = createBookItemElement(book);
@@ -50,12 +64,17 @@ document.addEventListener('DOMContentLoaded', function() {
               }
             } else {
               const noBooksMessageElement = document.createElement('p');
-              noBooksMessageElement.textContent = 'Немає популярних книг для цієї категорії';
+              noBooksMessageElement.textContent =
+                'Немає популярних книг для цієї категорії';
               categoryElement.appendChild(noBooksMessageElement);
             }
+            
           })
           .catch(error => {
-            console.log(`Сталася помилка при отриманні даних для категорії "${category.list_name}" з API:`, error);
+            console.log(
+              `Сталася помилка при отриманні даних для категорії "${category.list_name}" з API:`,
+              error
+            );
           });
 
         categoryContainer.appendChild(categoryElement);
@@ -69,6 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function createBookItemElement(book) {
   const bookItemElement = document.createElement('li');
   bookItemElement.classList.add('book-item');
+   bookItemElement.id = `${book._id}`;
 
   const bookImageElement = document.createElement('img');
   bookImageElement.src = book.book_image;
