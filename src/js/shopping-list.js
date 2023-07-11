@@ -1,3 +1,6 @@
+Amazon.com. Spend less. Smile more.
+Free shipping on millions of items. Get the best of Shopping and Entertainment with Prime. Enjoy low prices and great deals on the largest selection of everyday essentials and other products, including fashion, home, beauty, electronics, Alexa Devices, sporting goods, toys, automotive, pets, baby, books, video games, musical instruments, office supplies, and more.
+
 const KEY_SL = 'bookList';
 let imgEmpryBig = new URL('/src/assets/img/empty-page@2.png', import.meta.url);
 let imgEmpry = new URL('/src/assets/img/empty-page.png', import.meta.url);
@@ -104,7 +107,7 @@ function markupBookContent(parsedData) {
                             src="${imgchop3}"
                             alt=""
 
-                            />       
+/>       
                         </a>
                       </li>
                     </ul>
@@ -135,5 +138,3 @@ function deliteBookId() {
     });
   }
 }
-
-
