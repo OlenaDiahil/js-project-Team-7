@@ -3,8 +3,20 @@ const modal = document.querySelector('.modal');
 const modalCloseButton = document.querySelector('.modal_close');
 const scrollButton = document.querySelector('.back-to-top');
 
-modalCloseButton.addEventListener('click', function () {
-  closeModal();
+modalCloseButton.addEventListener('click', closeModal);
+
+// Додати обробник події "click" на backdrop модального вікна
+modal.addEventListener('click', function (event) {
+  if (event.target === modal) {
+    closeModal();
+  }
+});
+
+// Додати обробник події "keydown" на документ
+document.addEventListener('keydown', function (event) {
+  if (event.key === 'Escape') {
+    closeModal();
+  }
 });
 
 export function openModal(bookId) {
