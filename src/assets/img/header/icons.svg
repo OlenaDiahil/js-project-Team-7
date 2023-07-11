@@ -48,5 +48,8 @@
 <path d="M157.531 1.127v29.417h4.361v-29.417h-4.361z"></path>
 <path d="M176.003 4.665v-3.538c-0.864-0.165-1.81-0.288-2.88-0.288-3.456 0-5.349 1.563-5.349 6.007v2.674h-3.003v3.538h3.003v17.486h4.361v-17.486h3.867v-3.538h-3.867v-2.304c0-2.386 1.070-2.674 3.867-2.551z"></path>
 </symbol>
+<symbol id="icon-x-close" viewBox="0 0 32 32">
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3.4286" d="M24 8l-16 16M8 8l16 16"></path>
+</symbol>
   </defs>
 </svg>
