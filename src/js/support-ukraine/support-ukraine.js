@@ -10,22 +10,23 @@ function makeMarkup({ url, title, img }, index) {
   const digits = (index + 1).toString().padStart(2, '0');
 
   return `
-  <li class="swiper-slide">
-        <div class="support-item">
-        <span class="support-index">${digits}</span>
-        <a class="support-link" href="${url}" target="_blank" rel="noopener noreferrer nofollow">
-            <img
-                srcset="${img.normal} 1x, ${img.retina} 2x"
-                src="${img.normal}" type="image/png" alt="${title}">
-        </a>
-    </li>`;
+  <div class="swiper-slide">
+    <div class="support-item">
+    <span class="support-index">${digits}</span>
+    <a class="support-link" href="${url}" target="_blank" rel="noopener noreferrer nofollow">
+        <img
+            srcset="${img.normal} 1x, ${img.retina} 2x"
+            src="${img.normal}" type="image/png" alt="${title}">
+    </a>
+</div>
+</div>`;
 }
-
+console.log(list, html);
 list.innerHTML = html;
 
-const str = fonds.map((element, index) => {
-  return '<li class="support-item"> Посилання на фонд <a class="support-link" href=""></a></li>';
-});
+// const str = fonds.map((element, index) => {
+//   return '<li class="support-item"> Посилання на фонд <a class="support-link" href=""></a></li>';
+// });
 
 const swiper = new Swiper('.swiper', {
   direction: 'vertical',
@@ -34,7 +35,7 @@ const swiper = new Swiper('.swiper', {
   spaceBetween: 20,
   effect: 'slide',
   breakpoints: {
-    480: {
+    768: {
       slidesPerView: 6,
     },
   },
