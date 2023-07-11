@@ -30,10 +30,10 @@
     }
 }
 .span-books{        
-    color: #4F2EE8;
+    color: var(--blue);
 }
 .category-item{
-    color: #B4AFAF;
+    color: var(--grey-title-color);
         font-family: DM Sans;
         font-size: 14px;
         font-style: normal;
@@ -107,7 +107,7 @@
 }
 
 .book-author{
-    color: #B4AFAF; 
+    color: var(--grey-title-color); 
     font-size: 12px;
     font-style: italic;
     font-weight: 400;
@@ -118,8 +118,8 @@
 }
 .see-more-button{
     border-radius: 40px;
-    border: 2px solid #4F2EE8;
-    background-color: white;
+    border: 2px solid var(--blue);
+    background-color: var(--background-color-main);
     display: flex;
     align-items: flex-start;
     gap: 10px;
