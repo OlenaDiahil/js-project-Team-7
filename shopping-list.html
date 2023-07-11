@@ -7,12 +7,12 @@
   <title>Bookshelf</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css">
   
-  <script type="module" crossorigin src="/js-project-Team-7/assets/scroll-up-6d50afb6.js"></script>
-  <link rel="stylesheet" href="/js-project-Team-7/assets/scroll-up-21fb7e4c.css">
+  <script type="module" crossorigin src="/js-project-Team-7/assets/shopping-list-6c02ed4c.js"></script>
+  <link rel="stylesheet" href="/js-project-Team-7/assets/shopping-list-21fb7e4c.css">
 </head>
   <body>
-    
-    <header class="header">
+    <div class="header">
+      <header class="header">
   <div class="header-overlay">
 
     <a href="./index.html" class="header-logo-link">
@@ -70,6 +70,76 @@
   </div>
 </header>
 
+      
+                        <!--Burger menu  -->
+<div class="burger-menu is-hidden " data-menu>
+  <div class="container-burger-top">
+    <a href="./index.html" class="header-logo-link">
+      <svg class="header-logo"
+      width="24" height="24">
+        <use href="./assets\img/header/icons.svg#icon-logo"></use>
+      </svg>
+     
+    <svg class="header-logo-bookshelf"
+    width="77" height="13.27">
+      <use href="./assets\img/header/icons.svg#icon-Bookshelf"></use>
+    </svg>
+  </a>
+
+  <div class="header-switcher">
+    <label for="switcher-button" class="switcher">
+      <input type="checkbox" id="switcher-button" class="switcher-button" />
+    </label>
+  </div>
+      <button type="button" class="burger-close-btn" data-menu-close>
+          <svg
+              width="28px"
+              height="28px">
+              <use href="/js-project-Team-7/assets/icons-4ae6299c.svg#icon-x-close"></use>
+          </svg>
+      </button>
+  </div>
+
+    <div class="user-photo-name">
+    <img
+    src="./assets\img/header/stephen.png"
+    alt="user"
+    width="37"
+    height="37"
+    class="user-img"
+  />
+<p class="user-name">Stephen</p>
+</div>
+
+<div class="div-burger-nav">
+    <ul class="burger-nav">
+        <li class="burger-nav-item"><a href="./index.html" class="burger-link-active current">HOME</a></li>
+        <li class="burger-nav-item"><a href="./shopping-list.html" class="burger-link"
+            >SHOPPING LIST
+            <svg class="site-nav-logo-burger"
+            width="20" height="20">
+              <use href="./assets\img/header/icons.svg#icon-uil_cart"></use>
+            </svg> 
+          </a></li>
+    </ul>
+</div>
+<div class="burger-btn-background">
+<button type="button" class="button-log-out">
+    Log out    
+     <svg class="burger-menu-icon"
+    width="20" 
+    height="20">
+      <use href="./assets\img/header/icons.svg#arrow-right"></use>
+    </svg>
+</button>
+    <img
+    src="./assets\img/header/background-burger.png"
+    alt="book image"
+    class="background-burger"
+ />
+</div>
+  </div>
+    </div>
     <div class="container-shopping-list">
       <div class="shoppingList-suppot">
         <div class="support-ukraine">
@@ -111,12 +181,6 @@
     <p class="footer-text"> &copy; 2023 | All Rights Reserved | Developed by GoIT
     Students </p>
 </footer>
-
-    <button type="button" class="back-to-top hidden" aria-label="Scroll to top">
-    <svg class="button-icon button-icon--arrow" width="24" height="25">
-        <use href="../assets/img/arrow-up.svg#icon-arrow-back"></use>
-    </svg>
-</button>
     
     
   </body>
