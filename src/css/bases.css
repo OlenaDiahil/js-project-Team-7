@@ -50,6 +50,7 @@
 
     --duration: 250ms;
     --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     /* // Font weight */
     --regular: 400;
@@ -72,6 +73,7 @@ body {
     padding: 0 24px;
     display: flex;
     gap: 40px;
+    margin-bottom: 40px
 }
 
 .sidebar {
@@ -84,6 +86,7 @@ body {
     .container {
         flex-direction: column;
         gap: 100px;
+        padding: 0 32px;
     }
 
     .sidebar {
@@ -92,9 +95,10 @@ body {
     }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 768px) {
     .container {
         gap: 40px;
+        padding: 0 20px;
     }
 
     .sidebar {
