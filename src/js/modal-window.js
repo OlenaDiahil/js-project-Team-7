@@ -6,7 +6,6 @@ const scrollButton = document.querySelector('.back-to-top');
     openModal();
   });*/
 
-
 modalCloseButton.addEventListener('click', function () {
   closeModal();
 });
@@ -23,27 +22,35 @@ export function openModal(bookId) {
     .then(response => response.json())
     .then(bookData => {
       // Отримання даних про книгу з відповіді API
-      const { book_image, author, title, description, marketplaces } = bookData;
+      const { book_image, author, title, description, buy_links } = bookData;
       console.log(bookData);
+
       // Відображення даних книги у модальному вікні
       const bookImgElement = document.querySelector('.book_img');
       const bookNameElement = document.querySelector('.modal_name_book');
       const bookAuthorElement = document.querySelector('.modal_name_author');
       const bookAboutElement = document.querySelector('.modal_book_about');
       const bookShopElement = document.querySelector('.modal_window_bookShop');
+      const boolShopAmazon = document.querySelector(
+        '.modal_window_icon_amazom'
+      );
+      const boolShopAppl = document.querySelector(
+        '.modal_window_icon_apple-books'
+      );
+      const boolShopBookShop = document.querySelector(
+        '.modal_window_icon_book-shop'
+      );
 
       // Зміна властивостей елементів HTML
       bookImgElement.src = book_image;
       bookNameElement.textContent = title;
       bookAuthorElement.textContent = author;
       bookAboutElement.textContent = description;
-
-      // Очистка посилань на майданчики
-      bookShopElement.innerHTML = '';
-
       // Додавання посилань на майданчики
+      boolShopAmazon.href = buy_links[0].url;
+      boolShopAppl.href = buy_links[1].url;
+      boolShopBookShop.href = buy_links[4].url;
 
-      
       // Збереження даних у LocalStorage
       const modalData = {
         book_image,
