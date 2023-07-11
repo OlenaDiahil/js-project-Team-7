@@ -1,12 +1,12 @@
 
 
 const KEY_SL = 'bookList';
-let imgEmpryBig = new URL('/src/images/empty-page@2.png', import.meta.url);
-let imgEmpry = new URL('/src/images/empty-page.png', import.meta.url);
-let imgchop1 = new URL('/src/images/shop1.png', import.meta.url);
-let imgchop2 = new URL('/src/images/shop2.png', import.meta.url);
-let imgchop3 = new URL('/src/images/shop3.png', import.meta.url);
-let imgIcon = new URL('/src/images/trash-03.png', import.meta.url);
+let imgEmpryBig = new URL('/src/img/shopping-list/empty-page@2.png', import.meta.url);
+let imgEmpry = new URL('/src/img/shopping-list/empty-page.png', import.meta.url);
+let imgchop1 = new URL('/src/img/shopping-list/shop1.png', import.meta.url);
+let imgchop2 = new URL('/src/img/shopping-list/shop2.png', import.meta.url);
+let imgchop3 = new URL('/src/img/shopping-list/shop3.png', import.meta.url);
+let imgIcon = new URL('/src/img/shopping-list/trash-03.png', import.meta.url);
 
 const ulMarkupSL = document.querySelector('.books-shoppingList');
 
