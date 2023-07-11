@@ -21,12 +21,8 @@ function makeMarkup({ url, title, img }, index) {
 </div>
 </div>`;
 }
-console.log(list, html);
-list.innerHTML = html;
 
-// const str = fonds.map((element, index) => {
-//   return '<li class="support-item"> Посилання на фонд <a class="support-link" href=""></a></li>';
-// });
+list.innerHTML = html;
 
 const swiper = new Swiper('.swiper', {
   direction: 'vertical',
