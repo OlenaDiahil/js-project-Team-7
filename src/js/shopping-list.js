@@ -11,8 +11,6 @@ const ulMarkupSL = document.querySelector('.books-shoppingList');
 
 let loadData = localStorage.getItem(KEY_SL);
 let parsedData = JSON.parse(loadData);
- 
-console.log(parsedData[0].bookData.book_image)
 
 window.addEventListener("load", loadBookSL);
 
@@ -24,7 +22,7 @@ function loadBookSL() {
   }
 }
 
-const markupBookZoro = `<li><p class="shoppingList-text">
+const markupBookZoro = `<li class="empry-shoppingListLi"><p class="shoppingList-text">
             This page is empty, add some books and proceed to order.
           </p>
           <a href="./index.html">
@@ -124,13 +122,16 @@ function markupBookContent(parsedData) {
   deliteBookId();
 }
 
+const deliteBookIdIcon = document.querySelector("box-shoppingList-trash")
+
 function deliteBookId() {
   let dots = document.getElementsByClassName('box-shoppingList-trash');
   let i;
+  console.log(dots)
 
   for (i = 0; i < dots.length; i++) {
     dots[i].addEventListener('click', e => {
-      let keyId = e.target.parentElement.attributes.id.value;
+      let keyId = e.target.parentElement.attributes.Id.value;
       let filtered = parsedData.filter(o => o.id !== keyId);
 
       localStorage.setItem(KEY_SL, JSON.stringify(filtered));
