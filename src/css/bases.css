@@ -8,16 +8,16 @@
     tab-size: 2;
 
     text-rendering: optimizeLegibility;
-    
-            /* Body color */
+
+    /* Body color */
     --background-color-main: #f6f6f6;
 
-            /* Main text color for nav, h1, name book, botton text "see more", 
+    /* Main text color for nav, h1, name book, botton text "see more", 
             and modal window add the shopping list  */
     --text-color-main: #111;
 
 
-            /* Header color */
+    /* Header color */
     --header-background-color: #FFFFFF;
     --header-border-color: #111111;
     --header-logo-color: #000000;
@@ -25,27 +25,27 @@
     --header-icons-hover: #4F2EE8;
     --header-nav-hover: #EAC645;
 
-            /* Hover for caregories  */
+    /* Hover for caregories  */
     --hover-categories: #4F2EE8;
 
-            /* Color for text All categories and scroll  */
-    --all-categories-text:rgba(17, 17, 17, 0.60);
-    --scroll-all-categories:#E0E0E0;
+    /* Color for text All categories and scroll  */
+    --all-categories-text: rgba(17, 17, 17, 0.60);
+    --scroll-all-categories: #E0E0E0;
 
 
-            /* Color for name category and author book */
+    /* Color for name category and author book */
     --grey-title-color: #b4afaf;
 
-            /* Color for button see more */
+    /* Color for button see more */
     --button-color-background: #f6f6f6;
 
-            /* Modal "add the shopping list"  */
+    /* Modal "add the shopping list"  */
     --border-modal: #111111;
     --color-name-author: #B4AFAF;
     --text-color-main: #111;
-                /* for text Congatulations */
-    --text-modal-cong: rgba(17, 17, 17, 0.50); 
-                /* for text "This page is empty... */
+    /* for text Congatulations */
+    --text-modal-cong: rgba(17, 17, 17, 0.50);
+    /* for text "This page is empty... */
     --text-list-empty: rgba(0, 0, 0, 0.60);
 
     --duration: 250ms;
