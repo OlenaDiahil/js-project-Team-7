@@ -1,11 +1,11 @@
 
 const KEY_SL = 'shoppingList';
-let imgEmpryBig = new URL('/assets/img/shopping-list/empty-page@2.png', import.meta.url);
-let imgEmpry = new URL('/assets/img/shopping-list/empty-page.png', import.meta.url);
-let imgchop1 = new URL('/assets/img/shopping-list/shop1.png', import.meta.url);
-let imgchop2 = new URL('/assets/img/shopping-list/shop2.png', import.meta.url);
-let imgchop3 = new URL('/assets/img/shopping-list/shop3.png', import.meta.url);
-let imgIcon = new URL('/assets/img/shopping-list/trash-03.png', import.meta.url);
+let imgEmpryBig = new URL('/img/shopping-list/empty-page@2.png', import.meta.url);
+let imgEmpry = new URL('/img/shopping-list/empty-page.png', import.meta.url);
+let imgchop1 = new URL('/img/shopping-list/shop1.png', import.meta.url);
+let imgchop2 = new URL('/img/shopping-list/shop2.png', import.meta.url);
+let imgchop3 = new URL('/img/shopping-list/shop3.png', import.meta.url);
+let imgIcon = new URL('/img/shopping-list/trash-03.png', import.meta.url);
 
 const ulMarkupSL = document.querySelector('.books-shoppingList');
 

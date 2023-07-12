@@ -1,5 +1,6 @@
 .container-shopping-list {
   max-width: 375px;
+  /* height: 100%; */
   padding-left: 20px;
   padding-right: 20px;
   margin-left: auto;
@@ -64,7 +65,7 @@
 
 @media screen and (max-width: 1440px) {
   .shoppingList-suppot {
-      display: none;
+    display: none;
   }
 }
 
@@ -80,15 +81,15 @@
 }
 
 .books-shoppingList-img {
-    margin-right: 14px;
-    width: 100px;
-    height: 142px;
-    border-radius: 8px;
-    overflow: hidden;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    object-fit: cover;
-    background-image: url(../assets/img/shopping-list/plug.png);
+  margin-right: 14px;
+  width: 100px;
+  height: 142px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-image: url(/img/shopping-list/plug.png);
 }
 
 .shoppingList-img {
@@ -102,18 +103,21 @@
   background-position: 50% 50%;
   background-repeat: no-repeat;
   object-fit: cover;
-  background-image: url(../assets/img/shopping-list/empty-page.png);
+  background-image: url(/img/shopping-list/empty-page.png);
 }
+
 @media screen and (min-width: 768px) {
   .shoppingList-title {
     line-height: 1.08;
   }
+
   .shoppingList-text {
     margin-top: 100px;
     font-size: 18px;
     line-height: 1.33;
     width: 349px;
   }
+
   .shoppingList-img {
     margin-top: 20px;
     width: 322px;
@@ -163,14 +167,14 @@
   background-position: 50% 50%;
   background-repeat: no-repeat;
   object-fit: cover;
-  background-image: url(../assets/img/shopping-list/plug.png);
+  background-image: url(/img/shopping-list/plug.png);
 }
 
 @media screen and (min-device-pixel-ratio: 2),
-  screen and (min-resolution: 192dpi),
-  screen and (min-resolution: 2dppx) {
+screen and (min-resolution: 192dpi),
+screen and (min-resolution: 2dppx) {
   .books-shoppingList-img {
-    background-image: url(../assets/img/shopping-list/plug@2.png);
+    background-image: url(/img/shopping-list/plug@2.png);
   }
 }
 
@@ -179,11 +183,13 @@
   height: 142px;
   position: relative;
 }
+
 .box-shoppingList {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
+
 .text-shoppingList-title {
   font-family: DM Sans;
   font-style: normal;
@@ -195,8 +201,9 @@
   color: var(--black-color);
   margin-bottom: 4px;
 }
+
 .text-shoppingList-category {
-  font-family: DM Sans;
+  font-family: "DM Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -205,6 +212,7 @@
   color: #b4afaf;
   margin-bottom: 8px;
 }
+
 .box-shoppingList-trash {
   display: flex;
   align-items: center;
@@ -217,19 +225,21 @@
   background-color: #4f2ee8;
   transition: transform var(--animation);
 }
+
 .box-shoppingList-trash-icon {
   width: 16px;
   height: 16px;
 
   fill: white;
 }
+
 .box-shoppingList-trash:focus,
 .box-shoppingList-trash:hover {
   transform: scale(1.2);
 }
 
 .text-shoppingList-content {
-  font-family: DM Sans;
+  font-family: "DM Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -238,6 +248,7 @@
   color: var(--text-color-main);
   margin-bottom: 14px;
 }
+
 .box-shoppingList-link {
   display: flex;
   justify-content: space-between;
@@ -248,8 +259,9 @@
   left: 0;
   margin: 0;
 }
+
 .text-shoppingList-author {
-  font-family: DM Sans;
+  font-family: "DM Sans";
   font-style: italic;
   font-weight: 400;
   font-size: 12px;
@@ -257,18 +269,21 @@
   letter-spacing: -0.04em;
   color: #b4afaf;
 }
+
 .box-shoppingList-shop {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 8px;
 }
+
 .shop-shoppingList-link {
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--text-color-main);
 }
+
 .shop-shoppingList-img1 {
   width: 32px;
   height: 11px;
@@ -276,6 +291,7 @@
   transition: transform var(--animation), filter var(--animation);
   filter: grayscale(100%);
 }
+
 .shop-shoppingList-img2 {
   width: 16px;
   height: 16px;
@@ -283,6 +299,7 @@
   filter: grayscale(100%);
   transition: transform var(--animation), filter var(--animation);
 }
+
 .shop-shoppingList-img1:focus,
 .shop-shoppingList-img2:focus,
 .shop-shoppingList-img1:hover,
@@ -294,35 +311,44 @@
   .books-shoppingListLi {
     max-width: 704px;
   }
+
   .books-shoppingList-img {
     width: 116px;
     height: 165px;
     margin-right: 24px;
   }
+
   .box-shoppingList-content {
     height: 165px;
   }
+
   .text-shoppingList-category {
     margin-bottom: 14px;
   }
+
   .box-shoppingList-trash {
     width: 34px;
     height: 34px;
   }
+
   .box-shoppingList-trash-icon {
     width: 18px;
     height: 18px;
   }
+
   .text-shoppingList-content {
     margin-bottom: 32px;
   }
+
   .box-shoppingList-shop {
     gap: 16px;
   }
+
   .shop-shoppingList-img1 {
     width: 48px;
     height: 16px;
   }
+
   .shop-shoppingList-img2 {
     width: 32px;
     height: 30px;

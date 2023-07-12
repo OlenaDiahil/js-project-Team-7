@@ -55,7 +55,7 @@ async function clikOnCategory(event) {
             Notiflix.Notify.info("This category doesn't contain any books!", 4000)
             return 
         }
-        console.log(data);
+
         bestSellersElmnt.classList.add('visually-hidden');
         categoryBooksEl.classList.remove('visually-hidden');
     
