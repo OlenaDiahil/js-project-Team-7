@@ -43,10 +43,10 @@
     --border-modal: #111111;
     --color-name-author: #B4AFAF;
     --text-color-main: #111;
-            /* for text Congatulations */
+                /* for text Congatulations */
     --text-modal-cong: rgba(17, 17, 17, 0.50); 
-
-
+                /* for text "This page is empty... */
+    --text-list-empty: rgba(0, 0, 0, 0.60);
 
     --duration: 250ms;
     --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
