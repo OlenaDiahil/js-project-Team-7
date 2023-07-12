@@ -15,5 +15,5 @@ body.dark {
     --button-color-background: #202024;
     --border-modal: #FFFFFF;
     --text-modal-cong: rgba(255, 255, 255, 0.50);
-
+    --text-list-empty: rgba(255, 255, 255, 0.60);
 }
