@@ -117,9 +117,10 @@
     margin-top: 4px;
 }
 .see-more-button{
+    color: var(--text-color-main);
     border-radius: 40px;
-    border: 2px solid var(--hover-categories);
-    background-color: var(--background-color-main);
+    border: 2px solid #4F2EE8;
+    background-color: var(--button-color-background);
     display: flex;
     align-items: flex-start;
     gap: 10px;

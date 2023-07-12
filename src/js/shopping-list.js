@@ -1,6 +1,6 @@
 
 const KEY_SL = 'shoppingList';
-let imgEmpryBig = new URL('/assets/img/shopping-list/empty-page@2.png', import.meta.url); 
+let imgEmpryBig = new URL('/assets/img/shopping-list/empty-page@2.png', import.meta.url);
 let imgEmpry = new URL('/assets/img/shopping-list/empty-page.png', import.meta.url);
 let imgchop1 = new URL('/assets/img/shopping-list/shop1.png', import.meta.url);
 let imgchop2 = new URL('/assets/img/shopping-list/shop2.png', import.meta.url);
@@ -52,14 +52,14 @@ function markupBookContent(parsedData) {
                       <h2 class="text-shoppingList-title">${parsedData.bookData.title}</h2>
                       <p class="text-shoppingList-category">${parsedData.bookData.publisher}</p>
                     </div>
-                    <button class="box-shoppingList-trash" id="${parsedData.bookData.bookId}">
+                    <button class="box-shoppingList-trash" id="${parsedData.bookId}">
                        <img
                             class="box-shoppingList-trash-icon"
                             src="${imgIcon}"
                             alt="trash"
 
-                            />       
-                      </svg>   
+                            />
+                      </svg>
                     </button>
                   </div>
                   <p class="text-shoppingList-content">
@@ -79,7 +79,7 @@ function markupBookContent(parsedData) {
                             src="${imgchop1}"
                             alt=""
 
-                            />       
+                            />
                         </a>
                       </li>
                       <li>
@@ -87,13 +87,13 @@ function markupBookContent(parsedData) {
                           class="shop-shoppingList-link"
                           target="_blank"
                           href="https://goto.applebooks.apple"
-                        >                          
+                        >
                           <img
                             class="shop-shoppingList-img2"
                             src="${imgchop2}"
                             alt=""
 
-                          />           
+                          />
                         </a>
                       </li>
                       <li>
@@ -107,7 +107,7 @@ function markupBookContent(parsedData) {
                             src="${imgchop3}"
                             alt=""
 
-/>       
+/>
                         </a>
                       </li>
                     </ul>
@@ -125,14 +125,12 @@ function markupBookContent(parsedData) {
 function deliteBookId() {
   let dots = document.getElementsByClassName('box-shoppingList-trash');
   let i;
-  console.log(dots)
 
   for (i = 0; i < dots.length; i++) {
     dots[i].addEventListener('click', e => {
-      let keyId = e.target.parentElement.bookId;
-      console.log(keyId)
-      let filtered = parsedData.filter(o => o.bookData.bookId !== keyId);
 
+      let keyId = e.target.parentElement.id;
+      let filtered = parsedData.filter(o => o.bookId !== keyId);
       localStorage.setItem(KEY_SL, JSON.stringify(filtered));
       loadData = localStorage.getItem(KEY_SL);
       parsedData = JSON.parse(loadData);

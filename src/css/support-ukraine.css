@@ -22,7 +22,7 @@
   margin-left: auto;
   margin-right: auto;
   font-family: 'DM Sans';
-  color: var(--header-background-color);
+  color: #FFFFFF;
   font-family: DM Sans;
   font-size: 28px;
   font-style: normal;
@@ -31,7 +31,7 @@
   letter-spacing: -1.12px;
 }
 .icon-ua {
-  fill: var(--header-background-color);
+  fill: #FFFFFF;
 }
 .icon-down {
   fill: var(--header-icons-hover);
