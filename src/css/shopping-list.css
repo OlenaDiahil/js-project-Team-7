@@ -1,21 +1,28 @@
 .container-shopping-list {
+  max-width: 375px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 40px;
-  padding: 0 24px;
-  display: flex;
-  gap: 40px;
-  margin-bottom: 40px
-    
+  margin-bottom: 40px;
 }
 
-@media (max-width: 1440px) {
+@media screen and (min-width: 768px) {
   .container-shopping-list {
-    padding: 0 32px;
+    padding-left: 32px;
+    padding-right: 32px;
+    max-width: 768px;
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (min-width: 1440px) {
   .container-shopping-list {
-    padding: 0 20px;
+    max-width: 1440px;
+    padding-left: 24px;
+    padding-right: 24px;
+    display: flex;
+    gap: 40px;
   }
 }
 
@@ -60,7 +67,6 @@
       display: none;
   }
 }
-
 
 .books-shoppingListLi {
   display: flex;
@@ -132,8 +138,20 @@
 }
 
 .empry-shoppingListLi {
-  width: 100vw;
-  max-width: 996px;
+  min-height: 400px;
+  width: 335px;
+}
+
+@media screen and (min-width: 768px) {
+  .empry-shoppingListLi {
+    width: 704px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .empry-shoppingListLi {
+    width: 996px;
+  }
 }
 
 .books-shoppingList-img {

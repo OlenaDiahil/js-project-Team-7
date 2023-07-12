@@ -66,14 +66,41 @@
 
 body {
     margin: 0;
+    position: relative;
+    min-height: 100vh;
 }
 
 .container {
+    max-width: 375px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 40px;
-    padding: 0 24px;
+    margin-bottom: 40px;
     display: flex;
+    flex-direction: column;
     gap: 40px;
-    margin-bottom: 40px
+
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        padding-left: 32px;
+        padding-right: 32px;
+        max-width: 768px;
+        gap: 100px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .container {
+        max-width: 1440px;
+        padding-left: 24px;
+        padding-right: 24px;
+        flex-direction: row;
+        gap: 86px;
+    }
 }
 
 .sidebar {
@@ -83,12 +110,6 @@ body {
 }
 
 @media (max-width: 1440px) {
-    .container {
-        flex-direction: column;
-        gap: 100px;
-        padding: 0 32px;
-    }
-
     .sidebar {
         flex-direction: row;
         gap: 32px;
@@ -96,11 +117,6 @@ body {
 }
 
 @media (max-width: 768px) {
-    .container {
-        gap: 40px;
-        padding: 0 20px;
-    }
-
     .sidebar {
         flex-direction: column;
         gap: 40px;

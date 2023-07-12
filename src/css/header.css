@@ -53,10 +53,16 @@
 
                     /* Style for Header */
 
+ .header {
+    background-color: var(--header-background-color);
+    border: 1.5px solid var(--header-border-color);
+    border-radius: 0px 0px 8px 8px;
+ }  
+
  .header-overlay {
-  background-color: var(--header-background-color);
-  border: 1.5px solid var(--header-border-color);
-  border-radius: 0px 0px 8px 8px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 375px;
   display: flex;
   align-items: center;
   padding: 20px 20px 20px 20px;
@@ -64,14 +70,16 @@
   }
 
   @media screen and (min-width:768px) {
- .header-overlay {
-  padding: 14px 32px 13px 32px;
- }
+  .header-overlay {
+      max-width: 768px;
+      padding: 14px 32px 13px 32px;
+  }
 }
 
 @media screen and (min-width:1440px) {
   .header-overlay {
-   padding: 14px 24px 13px 24px;
+    max-width: 1440px;
+    padding: 14px 24px 13px 24px;
   }
  }
 
