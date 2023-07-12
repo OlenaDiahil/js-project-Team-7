@@ -122,8 +122,6 @@ function markupBookContent(parsedData) {
   deliteBookId();
 }
 
-const deliteBookIdIcon = document.querySelector("box-shoppingList-trash")
-
 function deliteBookId() {
   let dots = document.getElementsByClassName('box-shoppingList-trash');
   let i;
