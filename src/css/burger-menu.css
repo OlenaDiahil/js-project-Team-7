@@ -106,9 +106,15 @@
   gap: 4px;
 }
 
+
 .site-nav-logo-burger {
-  fill: #ffffff;
+  fill: #FFF;
 }
+
+.site-nav-logo-burger_shopp {
+  fill: #111;
+}
+
 
 .button-log-out {
   display: flex;

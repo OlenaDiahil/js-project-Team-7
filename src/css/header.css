@@ -196,8 +196,12 @@
 @media screen and (min-width:768px) {
 .site-nav__logo {
   fill: var(--header-icons-color);
+  }
 
-  }}
+.site-nav__logo_shopp {
+    fill: #111;
+  }
+}
 
 
 .sign-up-button {
