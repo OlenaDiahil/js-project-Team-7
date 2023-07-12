@@ -7,6 +7,7 @@
   margin-right: auto;
   margin-top: 40px;
   margin-bottom: 40px;
+  padding-bottom: 80px;
 }
 
 @media screen and (min-width: 768px) {
@@ -138,7 +139,7 @@
   padding: 14px;
   border: 2px solid rgba(79, 46, 232, 0.4);
   border-radius: 16px;
-  max-width: 335px;
+  width: 335px;
 }
 
 .empry-shoppingListLi {
@@ -309,7 +310,7 @@ screen and (min-resolution: 2dppx) {
 
 @media screen and (min-width: 768px) {
   .books-shoppingListLi {
-    max-width: 704px;
+    width: 704px;
   }
 
   .books-shoppingList-img {
@@ -357,6 +358,6 @@ screen and (min-resolution: 2dppx) {
 
 @media screen and (min-width: 1440px) {
   .books-shoppingListLi {
-    max-width: 996px;
+    width: 996px;
   }
 }

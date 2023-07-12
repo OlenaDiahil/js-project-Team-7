@@ -116,7 +116,7 @@ body {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .sidebar {
         flex-direction: column;
         gap: 40px;
