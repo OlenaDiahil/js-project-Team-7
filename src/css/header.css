@@ -9,7 +9,7 @@
 
 @media screen and (min-width: 768px) {
   .header-switcher {
-    margin-right: 24px;
+    margin-right: 0px;
     }
 }
 
@@ -204,7 +204,7 @@
 }
 
 
-.sign-up-button {
+/* .sign-up-button {
   display: none;
 }
 
@@ -228,12 +228,12 @@
   padding-left:14px;
   padding-right:14px;
     }
-}
+} */
 
-@media screen and (min-width:768px) {
+/* @media screen and (min-width:768px) {
   .sign-up-button_icon{ 
     fill:#EAC645;
-}}
+}} */
 
 .button-menu {
   border: none;
